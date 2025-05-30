@@ -1,0 +1,325 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/actividades",
+      "regex": "^/actividades(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades(?:/)?$"
+    },
+    {
+      "page": "/actividades/comunicacion/competencias/modulo1",
+      "regex": "^/actividades/comunicacion/competencias/modulo1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/comunicacion/competencias/modulo1(?:/)?$"
+    },
+    {
+      "page": "/actividades/comunicacion/competencias/modulo2",
+      "regex": "^/actividades/comunicacion/competencias/modulo2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/comunicacion/competencias/modulo2(?:/)?$"
+    },
+    {
+      "page": "/actividades/comunicacion/competencias/modulo3",
+      "regex": "^/actividades/comunicacion/competencias/modulo3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/comunicacion/competencias/modulo3(?:/)?$"
+    },
+    {
+      "page": "/actividades/comunicacion/competencias/modulo4",
+      "regex": "^/actividades/comunicacion/competencias/modulo4(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/comunicacion/competencias/modulo4(?:/)?$"
+    },
+    {
+      "page": "/actividades/comunicacion/habilidades/modulo1",
+      "regex": "^/actividades/comunicacion/habilidades/modulo1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/comunicacion/habilidades/modulo1(?:/)?$"
+    },
+    {
+      "page": "/actividades/comunicacion/habilidades/modulo2",
+      "regex": "^/actividades/comunicacion/habilidades/modulo2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/comunicacion/habilidades/modulo2(?:/)?$"
+    },
+    {
+      "page": "/actividades/comunicacion/habilidades/modulo3",
+      "regex": "^/actividades/comunicacion/habilidades/modulo3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/comunicacion/habilidades/modulo3(?:/)?$"
+    },
+    {
+      "page": "/actividades/comunicacion/habilidades/modulo4",
+      "regex": "^/actividades/comunicacion/habilidades/modulo4(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/comunicacion/habilidades/modulo4(?:/)?$"
+    },
+    {
+      "page": "/actividades/empleo/modulo1",
+      "regex": "^/actividades/empleo/modulo1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/empleo/modulo1(?:/)?$"
+    },
+    {
+      "page": "/actividades/empleo/modulo2",
+      "regex": "^/actividades/empleo/modulo2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/empleo/modulo2(?:/)?$"
+    },
+    {
+      "page": "/actividades/empleo/modulo3",
+      "regex": "^/actividades/empleo/modulo3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/empleo/modulo3(?:/)?$"
+    },
+    {
+      "page": "/actividades/empleo/modulo4",
+      "regex": "^/actividades/empleo/modulo4(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/empleo/modulo4(?:/)?$"
+    },
+    {
+      "page": "/actividades/negocio/modulo1",
+      "regex": "^/actividades/negocio/modulo1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/negocio/modulo1(?:/)?$"
+    },
+    {
+      "page": "/actividades/negocio/modulo2",
+      "regex": "^/actividades/negocio/modulo2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/negocio/modulo2(?:/)?$"
+    },
+    {
+      "page": "/actividades/negocio/modulo3",
+      "regex": "^/actividades/negocio/modulo3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/negocio/modulo3(?:/)?$"
+    },
+    {
+      "page": "/actividades/negocio/modulo4",
+      "regex": "^/actividades/negocio/modulo4(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/negocio/modulo4(?:/)?$"
+    },
+    {
+      "page": "/actividades/negocio/modulo5",
+      "regex": "^/actividades/negocio/modulo5(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/actividades/negocio/modulo5(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/homepage",
+      "regex": "^/homepage(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/homepage(?:/)?$"
+    },
+    {
+      "page": "/inicio",
+      "regex": "^/inicio(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/inicio(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/programas/comunicacion",
+      "regex": "^/programas/comunicacion(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/comunicacion(?:/)?$"
+    },
+    {
+      "page": "/programas/comunicacion/modulos/competencias",
+      "regex": "^/programas/comunicacion/modulos/competencias(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/comunicacion/modulos/competencias(?:/)?$"
+    },
+    {
+      "page": "/programas/comunicacion/modulos/competencias/modulo1",
+      "regex": "^/programas/comunicacion/modulos/competencias/modulo1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/comunicacion/modulos/competencias/modulo1(?:/)?$"
+    },
+    {
+      "page": "/programas/comunicacion/modulos/competencias/modulo2",
+      "regex": "^/programas/comunicacion/modulos/competencias/modulo2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/comunicacion/modulos/competencias/modulo2(?:/)?$"
+    },
+    {
+      "page": "/programas/comunicacion/modulos/competencias/modulo3",
+      "regex": "^/programas/comunicacion/modulos/competencias/modulo3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/comunicacion/modulos/competencias/modulo3(?:/)?$"
+    },
+    {
+      "page": "/programas/comunicacion/modulos/competencias/modulo4",
+      "regex": "^/programas/comunicacion/modulos/competencias/modulo4(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/comunicacion/modulos/competencias/modulo4(?:/)?$"
+    },
+    {
+      "page": "/programas/comunicacion/modulos/habilidades",
+      "regex": "^/programas/comunicacion/modulos/habilidades(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/comunicacion/modulos/habilidades(?:/)?$"
+    },
+    {
+      "page": "/programas/comunicacion/modulos/habilidades/modulo1",
+      "regex": "^/programas/comunicacion/modulos/habilidades/modulo1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/comunicacion/modulos/habilidades/modulo1(?:/)?$"
+    },
+    {
+      "page": "/programas/comunicacion/modulos/habilidades/modulo2",
+      "regex": "^/programas/comunicacion/modulos/habilidades/modulo2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/comunicacion/modulos/habilidades/modulo2(?:/)?$"
+    },
+    {
+      "page": "/programas/comunicacion/modulos/habilidades/modulo3",
+      "regex": "^/programas/comunicacion/modulos/habilidades/modulo3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/comunicacion/modulos/habilidades/modulo3(?:/)?$"
+    },
+    {
+      "page": "/programas/comunicacion/modulos/habilidades/modulo4",
+      "regex": "^/programas/comunicacion/modulos/habilidades/modulo4(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/comunicacion/modulos/habilidades/modulo4(?:/)?$"
+    },
+    {
+      "page": "/programas/empleo",
+      "regex": "^/programas/empleo(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/empleo(?:/)?$"
+    },
+    {
+      "page": "/programas/empleo/modulos/modulo1",
+      "regex": "^/programas/empleo/modulos/modulo1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/empleo/modulos/modulo1(?:/)?$"
+    },
+    {
+      "page": "/programas/empleo/modulos/modulo2",
+      "regex": "^/programas/empleo/modulos/modulo2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/empleo/modulos/modulo2(?:/)?$"
+    },
+    {
+      "page": "/programas/empleo/modulos/modulo3",
+      "regex": "^/programas/empleo/modulos/modulo3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/empleo/modulos/modulo3(?:/)?$"
+    },
+    {
+      "page": "/programas/empleo/modulos/modulo4",
+      "regex": "^/programas/empleo/modulos/modulo4(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/empleo/modulos/modulo4(?:/)?$"
+    },
+    {
+      "page": "/programas/negocio",
+      "regex": "^/programas/negocio(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/negocio(?:/)?$"
+    },
+    {
+      "page": "/programas/negocio/modulos/modulo1",
+      "regex": "^/programas/negocio/modulos/modulo1(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/negocio/modulos/modulo1(?:/)?$"
+    },
+    {
+      "page": "/programas/negocio/modulos/modulo2",
+      "regex": "^/programas/negocio/modulos/modulo2(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/negocio/modulos/modulo2(?:/)?$"
+    },
+    {
+      "page": "/programas/negocio/modulos/modulo3",
+      "regex": "^/programas/negocio/modulos/modulo3(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/negocio/modulos/modulo3(?:/)?$"
+    },
+    {
+      "page": "/programas/negocio/modulos/modulo4",
+      "regex": "^/programas/negocio/modulos/modulo4(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/negocio/modulos/modulo4(?:/)?$"
+    },
+    {
+      "page": "/programas/negocio/modulos/modulo5",
+      "regex": "^/programas/negocio/modulos/modulo5(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/programas/negocio/modulos/modulo5(?:/)?$"
+    },
+    {
+      "page": "/registro",
+      "regex": "^/registro(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/registro(?:/)?$"
+    },
+    {
+      "page": "/usuario",
+      "regex": "^/usuario(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/usuario(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}
