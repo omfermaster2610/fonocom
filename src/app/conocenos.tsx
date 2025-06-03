@@ -51,12 +51,12 @@ const ConocenosMenu = () => {
               <p><strong>Tik Tok: </strong>FonoCom</p>
               <p>
                 <strong>WhatsApp : </strong>
-              <Link href="wa.me/573157569120">
+              <a href="https://wa.me/573157569120">
                 <span className="underline">3157569120</span>
-              </Link>,
-              <Link href="wa.me/573115508970">
+              </a>,
+              <a href="https://wa.me/573115508970">
                 <span className="underline"> 3115508970</span>
-              </Link>
+              </a>
               </p>
             </div>
           </li>
