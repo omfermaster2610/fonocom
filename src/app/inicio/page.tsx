@@ -293,6 +293,26 @@ const Intro = () => {
             Empezar ahora
           </button>
         </Link>
+        <br/>
+        <br/>
+        <div className="flex flex-row gap-6 justify-center space-x-4">
+          <a href="">
+            <Image src="/images/icons/tiktok.png" alt="tiktok" width={25} height={25} className="mt-8"></Image>
+          </a>
+          <a href="">
+            <Image src="/images/icons/facebook.png" alt="facebook" width={25} height={25} className="mt-8"></Image>
+          </a>
+          <a href="">
+            <Image src="/images/icons/instagram.png" alt="instagram" width={25} height={25} className="mt-8"></Image>
+          </a>
+          <a href="https://wa.me/573157569120">
+            <Image src="/images/icons/whatsapp.png" alt="whatsapp 1" width={25} height={25} className="mt-8"></Image>
+          </a>
+          <a href="https://wa.me/573115508970">
+            <Image src="/images/icons/whatsapp.png" alt="whatsapp 2" width={25} height={25} className="mt-8"></Image>
+          </a>
+        </div>
+
       </div>
   </section>
 
