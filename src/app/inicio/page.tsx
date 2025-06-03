@@ -1,5 +1,4 @@
 'use client'
-
 import React from "react";
 import { useEffect, useState } from "react";
 import Image from "next/image";
@@ -80,27 +79,25 @@ const Intro = () => {
           </Link>
         </nav>
       </div>
+      {/* Sección 1 */}
+    <section className="w-full min-h-screen bg-gradient-to-b from-[#cce0b4] via-white to-[#d9dbf7] flex flex-col items-center justify-center px-4 py-20" data-aos-delay={100}>
+        {/* Título principal */}
+        <p className="text-6xl sm:text-8xl font-bold text-[#1e2363] text-center" data-aos="fade-up">
+          <span className={playfair.className}>FONO</span>
+          <span className={pacifico.className}>Com</span>
+        </p>
 
-    <section className="w-full min-h-screen bg-gradient-to-b from-[#cce0b4] via-white to-[#d9dbf7] flex flex-col items-center justify-center px-4 py-20">
-      {/* Línea separadora */}
-        <div className="w-full max-w-6xl border-t border-gray-400 my-4" />
-      {/* Título principal */}
-      <p className="text-6xl sm:text-8xl font-bold text-[#1e2363] text-center">
-        <span className={playfair.className}>FONO</span>
-        <span className={pacifico.className}>Com</span>
-      </p>
-
-      {/* Subtítulo */}
-      <p className="mt-4 text-2xl sm:text-3xl font-light tracking-wide text-center text-black">
-        Inclusión e <br className="sm:hidden" /> innovación
-      </p>
-      <br/>
-      {/* Botón */}
-      <Link href="/registro">
-        <button className="button1 mt-8 bg-[#1e2363] hover:bg-[#151943] text-white font-semibold text-lg px-8 py-3 rounded-full transition shadow-md">
-          Empezar ahora
-        </button>
-      </Link>
+        {/* Subtítulo */}
+        <p className="mt-4 text-2xl sm:text-3xl font-light tracking-wide text-center text-black" data-aos="fade-up">
+          Inclusión e <br className="sm:hidden" /> innovación
+        </p>
+        <br/>
+        {/* Botón */}
+        <Link href="/registro">
+          <button className="button1 mt-8 bg-[#1e2363] hover:bg-[#151943] text-white font-semibold text-lg px-8 py-3 rounded-full transition shadow-md" data-aos="fade-up">
+            Empezar ahora
+          </button>
+        </Link>
     </section>
 
     {/* Sección 2 */}
@@ -139,9 +136,9 @@ const Intro = () => {
     </section>
 
     {/* Sección 3 */}
-    <div className="bg-gradient-to-b from-[#BDC3E9] to-[#9FC8F6] w-full flex justify-center items-center py-20">
+    <div className="bg-gradient-to-b from-[#BDC3E9] to-[#9FC8F6] w-full h-screen flex justify-center items-center py-20">
       <section className="w-full max-w-6xl px-4 sm:px-8 md:px-12 lg:px-20">
-        <div className="">
+        <div className="" data-aos="fade-up">
           <br/>
           <br/>
             {/* Lista de programas */}
@@ -186,7 +183,7 @@ const Intro = () => {
             </div>
 
             {/* Panel de detalle del programa */}
-            <div className="w-full h-auto lg:w-1/2 max-w-lg p-8">
+            <div className="w-full h-auto lg:w-1/2 max-w-lg p-8" data-aos="fade-left">
               <div className="bg-white/10 backdrop-blur-lg border border-white/30 rounded-3xl shadow-xl p-8">
                 <h3 className="text-3xl font-bold text-[#1e2363] mb-4">
                   {selectedProgram.name}
@@ -194,6 +191,7 @@ const Intro = () => {
                 <p className="text-gray-700 text-base leading-relaxed mb-6">
                   {selectedProgram.description}
                 </p>
+                <br/>
                 <Link href="/registro">
                   <button className="button1">Empezar ahora</button>
                 </Link>
@@ -211,18 +209,18 @@ const Intro = () => {
       <div className="max-w-full w-full mx-auto flex flex-col md:flex-row items-center justify-center-safe gap-2">
         {/* Texto */}
         <div className="md:w-2/5">
-          <p className="text-4xl md:text-5xl font-bold text-black mb-6">
+          <p className="text-4xl md:text-5xl font-bold text-black mb-6" data-aos="fade-right">
             Apoyar a su comunicación <br />
             <span className="font-extrabold">nos importa</span>
           </p>
           <br/>
-          <p className="text-lg text-black leading-relaxed">
+          <p className="text-lg text-black leading-relaxed" data-aos="fade-right">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tincidunt eros, at tincidunt ante. Aenean ut imperdiet lacus. Morbi efficitur ullamcorper erat, ac vestibulum sapien dignissim at. Morbi posuere, metus et maximus aliquam, lorem quam placerat erat, a gravida justo mauris vestibulum sem.
           </p>
         </div>
 
         {/* Imagen */}
-        <div className="md:w-1/2 flex justify-center">
+        <div className="md:w-1/2 flex justify-center" data-aos="fade-left">
           <Image
             src="/images/inicioChicaConLupa.png"
             alt="Mujer con lupa"
@@ -235,38 +233,39 @@ const Intro = () => {
     </section>
 
     {/* Sección 5 */}
-  <section className="bg-gradient-to-b from-[#90be3e] h-90 w-full to-[#e9f0e1] py-16 px-6 text-center">
-  <p className="text-4xl font-bold text-black mb-12">
+  <section className="bg-gradient-to-b from-[#90be3e] h-screen w-full to-[#e9f0e1] py-16 px-6 text-center">
+  <p className="text-4xl font-bold text-black mb-12" data-aos="fade-up">
     Conoce a nuestro equipo <br /> de trabajo
   </p>
+  <br/>
   <br/>
   <div className="flex flex-wrap justify-center gap-10">
     {/* Miembro del equipo */}
     {[
-      { nombre: "Kimberly", rol: "Lorem ipsum", img: "/images/kimberly.png" },
-      { nombre: "Andres", rol: "Lorem ipsum", img: "/images/andres.png" },
-      { nombre: "Kimberly", rol: "Lorem ipsum", img: "/images/kimberly.png" },
-      { nombre: "Kimberly", rol: "Lorem ipsum", img: "/images/kimberly.png" },
+      { nombre: "Ana María Collante", img: "/images/integrantes/anaMaria.png" },
+      { nombre: "Isis Ballona", img: "/images/integrantes/isisBallona.png" },
+      { nombre: "Ubaldo Andrés Hernández", img: "/images/integrantes/andres.png" },
+      { nombre: "Kimberly Johana Valencia", img: "/images/integrantes/kimberly.png" },
     ].map((persona, i) => (
-      <div key={i} className="flex flex-col items-center">
-        <div className="w-40 h-40 rounded-full border-[6px] border-black overflow-hidden flex items-center justify-center bg-white">
+      <div key={i} className="flex flex-col items-center" data-aos="fade-up" data-aos-delay={i * 100}>
+        <div className="integrantes w-40 h-40 rounded-full border-[6px] border-black overflow-hidden flex items-center justify-center bg-white">
           <Image
             src={persona.img}
             alt={persona.nombre}
-            width={100}
-            height={100}
-            className="object-cover h-full"
+            width={200}
+            height={200}
+            className="object-fill rounded-full"
           />
         </div>
-        <h3 className="mt-4 text-2xl font-serif font-bold">{persona.nombre}</h3>
-        <p className="text-lg font-serif">{persona.rol}</p>
+        <br/>
+        <p className="mt-4 font-serif font-bold">{persona.nombre}</p>
       </div>
     ))}
   </div>
 </section>
-
+    {/* Sección 6 */}
   <section className="bg-gradient-to-b from-[#eaf1e0] via-[#cce0ab] to-[#eaf1e0] h-90 w-full items-center py-32 px-6 text-center">
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center" data-aos="fade-up">
         <br/>      
       <p className="text-4xl font-bold text-black mb-4">
 
@@ -284,7 +283,6 @@ const Intro = () => {
       </Link>
     </div>
   </section>
-
 
     <div className="w-full bg-gradient-to-b from-[#eaf1e0] to-[#f3f3f3] mx-auto mt-16">
       <Footer />

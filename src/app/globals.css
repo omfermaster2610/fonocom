@@ -139,6 +139,12 @@ body {
   scale: 1.1;
 }
 
+.integrantes {
+
+  border: 6px white solid;
+
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
