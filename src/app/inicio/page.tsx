@@ -88,7 +88,7 @@ const Intro = () => {
           className="absolute z-0 h-2/3 sm:w-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         />
 
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm blur-sm z-10" />
+        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm z-10" />
 
         <div className="relative z-20 flex flex-col items-center justify-center">
           <p className="text-6xl sm:text-8xl font-bold text-[#1e2363] text-center" data-aos="fade-up">
@@ -218,13 +218,13 @@ const Intro = () => {
       <div className="max-w-full w-full mx-auto flex flex-col md:flex-row items-center justify-center-safe gap-2">
         {/* Texto */}
         <div className="md:w-2/5">
-          <p className="text-4xl md:text-5xl font-bold text-black mb-6" data-aos="fade-right">
+          <p className="text-2xl md:text-4xl font-bold text-black mb-6" data-aos="fade-right">
             Apoyar a su comunicación <br />
             <span className="font-extrabold">nos importa</span>
           </p>
           <br/>
-          <p className="text-lg text-black leading-relaxed text-justify" data-aos="fade-right">
-            En FonoCom, apoyar la comunicación de las personas con discapacidad cognitiva leve no solo nos importa, sino que es el corazón de nuestra misión. 
+          <p className="text-base text-black leading-relaxed text-justify" data-aos="fade-right">
+            En <strong>FonoCom</strong>, apoyar la comunicación de las personas con discapacidad cognitiva leve no solo nos importa, sino que es el corazón de nuestra misión. 
             Creemos firmemente que la comunicación es una herramienta fundamental para el desarrollo personal, la inclusión social y la autonomía. 
             Por eso, a través de nuestra plataforma web, ofrecemos servicios especializados que fortalecen las habilidades y competencias comunicativas, brindando recursos accesibles y significativos para usuarios, familias y profesionales. 
             Cada esfuerzo que hacemos está orientado a garantizar que estas personas sean escuchadas, comprendidas y valoradas en todos los contextos de su vida.
@@ -276,7 +276,7 @@ const Intro = () => {
       </div>
     </section>
     {/* Sección 6 */}
-    <section className="bg-gradient-to-b from-[#eaf1e0] via-[#cce0ab] to-[#eaf1e0] h-90 w-full items-center justify-center py-32 px-6 text-center">
+    <section className="bg-gradient-to-b from-[#eaf1e0] to-[#eaf1e0] h-90 w-full items-center justify-center py-32 px-6 text-center">
       <div className="flex flex-col items-center" data-aos="fade-up">
           <br/>      
         <p className="text-4xl font-bold text-black mb-4">

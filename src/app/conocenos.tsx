@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 
 const ConocenosMenu = () => {
   return (
@@ -48,6 +49,15 @@ const ConocenosMenu = () => {
               <p><strong>Facebook: </strong>FonoCom S.A.S</p>
               <p><strong>Instagram: </strong>@FonoComS.A.S</p>
               <p><strong>Tik Tok: </strong>FonoCom</p>
+              <p>
+                <strong>WhatsApp : </strong>
+              <Link href="wa.me/573157569120">
+                <span className="underline">3157569120</span>
+              </Link>,
+              <Link href="wa.me/573115508970">
+                <span className="underline"> 3115508970</span>
+              </Link>
+              </p>
             </div>
           </li>
 
