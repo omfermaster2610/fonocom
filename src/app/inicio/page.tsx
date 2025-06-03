@@ -48,7 +48,7 @@ const Intro = () => {
 
   return (
     <>
-    <div className="flex flex-col px-6 items-center justify-center min-h-screen bg-gradient-to-b from-[#cce0b4] via-white to-[#d9dbf7] py-20">
+    <div className="flex flex-col px-6 items-center justify-center min-h-screen bg-gradient-to-b from-[#cce0b4] via-white to-[#f3f3f3] py-20">
     <div className="fixed top-0 p-6 z-50 w-full bg-[#f3f3f3] bg-gradient-to-b from-[#f3f3f3] to-transparent flex items-center justify-between mb-8">
       <div className="flex items-center space-x-2"> 
           <Image
@@ -88,7 +88,7 @@ const Intro = () => {
           className="absolute z-0 h-2/3 sm:w-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
         />
 
-        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm z-10" />
+        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm blur-sm z-10" />
 
         <div className="relative z-20 flex flex-col items-center justify-center">
           <p className="text-6xl sm:text-8xl font-bold text-[#1e2363] text-center" data-aos="fade-up">
@@ -113,9 +113,8 @@ const Intro = () => {
     {/* Sección 2 */}
 
     <section className="bg-[#BDC3E9] py-16 px-8 relative justify-between">
-      <div className="h-10 bg-gradient-to-b from-[rgb(217,219,247)] to-[#BDC3E9] flex p-6" />
+      <div className="h-10 flex p-6" />
         <div className="max-w-full mx-auto flex flex-col md:flex-row items-center gap-6 relative p-6 z-10">
-          {/* Imagen con fade-in */}
           <div data-aos="fade-right" className="w-full md:w-1/2 flex justify-center">
             <Image
               src="/images/inicioChicaSenalando.png"
