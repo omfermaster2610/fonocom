@@ -80,24 +80,34 @@ const Intro = () => {
         </nav>
       </div>
       {/* Sección 1 */}
-    <section className="w-full min-h-screen bg-gradient-to-b from-[#cce0b4] via-white to-[#d9dbf7] flex flex-col items-center justify-center px-4 py-20" data-aos-delay={100}>
+    <section className="w-full min-h-screen bg-gradient-to-b from-[#cce0b4] via-white to-[#BDC3E9] flex flex-col items-center justify-center px-4 py-20" data-aos-delay={100}>
         {/* Título principal */}
-        <p className="text-6xl sm:text-8xl font-bold text-[#1e2363] text-center" data-aos="fade-up">
-          <span className={playfair.className}>FONO</span>
-          <span className={pacifico.className}>Com</span>
-        </p>
+        <img
+          src="/images/fonoconLogo.png"
+          alt="Fondo"
+          className="absolute z-0 h-2/3 sm:w-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+        />
 
-        {/* Subtítulo */}
-        <p className="mt-4 text-2xl sm:text-3xl font-light tracking-wide text-center text-black" data-aos="fade-up">
-          Inclusión e <br className="sm:hidden" /> innovación
-        </p>
-        <br/>
-        {/* Botón */}
-        <Link href="/registro">
-          <button className="button1 mt-8 bg-[#1e2363] hover:bg-[#151943] text-white font-semibold text-lg px-8 py-3 rounded-full transition shadow-md" data-aos="fade-up">
-            Empezar ahora
-          </button>
-        </Link>
+        <div className="absolute inset-0 bg-white/10 backdrop-blur-sm z-10" />
+
+        <div className="relative z-20 flex flex-col items-center justify-center">
+          <p className="text-6xl sm:text-8xl font-bold text-[#1e2363] text-center" data-aos="fade-up">
+            <span className={playfair.className}>FONO</span>
+            <span className={pacifico.className}>Com</span>
+          </p>
+
+          {/* Subtítulo */}
+          <p className="mt-4 text-2xl sm:text-3xl font-light tracking-wide text-center text-black" data-aos="fade-up">
+            Inclusión e <br className="sm:hidden" /> innovación
+          </p>
+          <br/>
+          {/* Botón */}
+          <Link href="/registro">
+            <button className="button1 mt-8 bg-[#1e2363] hover:bg-[#151943] text-white font-semibold text-lg px-8 py-3 rounded-full transition shadow-md" data-aos="fade-up">
+              Empezar ahora
+            </button>
+          </Link>
+        </div>
     </section>
 
     {/* Sección 2 */}
@@ -120,10 +130,10 @@ const Intro = () => {
           <div className="md:w-2/5 text-center md:text-left flex justify-center" data-aos="fade-up">
             <div className="comic-vignete bg-green-300 p-8 rounded-3xl border-4 border-black">
               <p className="text-[#444] mb-6 m-6sm:text-xl font-light">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolorem optio voluptas dolore atque fugiat.
-                Corporis atque magnam quas laboriosam magni possimus reprehenderit debitis animi aliquid, sed fuga impedit
-                officia.
+                En <strong>FonoCom S.A.S.</strong> creemos en un mundo donde cada voz cuenta. Trabajamos para construir puentes hacia un futuro en el que todos puedan ser escuchados y donde la comunicación deje de ser una barrera para convertirse en una oportunidad. 
+                Por eso, a través de nuestra plataforma web, ofrecemos servicios diseñados especialmente para personas con discapacidad cognitiva leve, convencidos de que cada desafío representa una oportunidad para crecer, aprender y superar límites.
               </p>
+              <br/>
               <Link href="/registro">
                 <button className="button1 bg-[#1e2363] hover:bg-[#151943] text-white font-semibold text-lg px-8 py-3 rounded-full transition shadow-md">
                   Empieza hoy
@@ -214,8 +224,11 @@ const Intro = () => {
             <span className="font-extrabold">nos importa</span>
           </p>
           <br/>
-          <p className="text-lg text-black leading-relaxed" data-aos="fade-right">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tincidunt eros, at tincidunt ante. Aenean ut imperdiet lacus. Morbi efficitur ullamcorper erat, ac vestibulum sapien dignissim at. Morbi posuere, metus et maximus aliquam, lorem quam placerat erat, a gravida justo mauris vestibulum sem.
+          <p className="text-lg text-black leading-relaxed text-justify" data-aos="fade-right">
+            En FonoCom, apoyar la comunicación de las personas con discapacidad cognitiva leve no solo nos importa, sino que es el corazón de nuestra misión. 
+            Creemos firmemente que la comunicación es una herramienta fundamental para el desarrollo personal, la inclusión social y la autonomía. 
+            Por eso, a través de nuestra plataforma web, ofrecemos servicios especializados que fortalecen las habilidades y competencias comunicativas, brindando recursos accesibles y significativos para usuarios, familias y profesionales. 
+            Cada esfuerzo que hacemos está orientado a garantizar que estas personas sean escuchadas, comprendidas y valoradas en todos los contextos de su vida.
           </p>
         </div>
 
@@ -233,55 +246,55 @@ const Intro = () => {
     </section>
 
     {/* Sección 5 */}
-  <section className="bg-gradient-to-b from-[#90be3e] h-screen w-full to-[#e9f0e1] py-16 px-6 text-center">
-  <p className="text-4xl font-bold text-black mb-12" data-aos="fade-up">
-    Conoce a nuestro equipo <br /> de trabajo
-  </p>
-  <br/>
-  <br/>
-  <div className="flex flex-wrap justify-center gap-10">
-    {/* Miembro del equipo */}
-    {[
-      { nombre: "Ana María Collante", img: "/images/integrantes/anaMaria.png" },
-      { nombre: "Isis Ballona", img: "/images/integrantes/isisBallona.png" },
-      { nombre: "Ubaldo Andrés Hernández", img: "/images/integrantes/andres.png" },
-      { nombre: "Kimberly Johana Valencia", img: "/images/integrantes/kimberly.png" },
-    ].map((persona, i) => (
-      <div key={i} className="flex flex-col items-center" data-aos="fade-up" data-aos-delay={i * 100}>
-        <div className="integrantes w-40 h-40 rounded-full border-[6px] border-black overflow-hidden flex items-center justify-center bg-white">
-          <Image
-            src={persona.img}
-            alt={persona.nombre}
-            width={200}
-            height={200}
-            className="object-fill rounded-full"
-          />
-        </div>
-        <br/>
-        <p className="mt-4 font-serif font-bold">{persona.nombre}</p>
+    <section className="bg-gradient-to-b from-[#90be3e] h-screen w-full to-[#e9f0e1] py-16 px-6 text-center">
+      <p className="text-4xl font-bold text-black mb-12" data-aos="fade-up">
+        Conoce a nuestro equipo <br /> de trabajo
+      </p>
+      <br/>
+      <br/>
+      <div className="flex flex-wrap justify-center gap-10 h-auto">
+        {/* Miembro del equipo */}
+        {[
+          { nombre: "Ana María Collante", img: "/images/integrantes/anaMaria.png" },
+          { nombre: "Isis Ballona", img: "/images/integrantes/isisBallona.png" },
+          { nombre: "Ubaldo Andrés Hernández", img: "/images/integrantes/andres.png" },
+          { nombre: "Kimberly Johana Valencia", img: "/images/integrantes/kimberly.png" },
+        ].map((persona, i) => (
+          <div key={i} className="flex flex-col items-center" data-aos="fade-up" data-aos-delay={i * 100}>
+            <div className="integrantes w-40 h-40 rounded-full border-[6px] border-black overflow-hidden flex items-center justify-center bg-white">
+              <Image
+                src={persona.img}
+                alt={persona.nombre}
+                width={200}
+                height={200}
+                className="object-fill rounded-full"
+              />
+            </div>
+            <br/>
+            <p className="mt-4 font-serif font-bold">{persona.nombre}</p>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
-</section>
+    </section>
     {/* Sección 6 */}
-  <section className="bg-gradient-to-b from-[#eaf1e0] via-[#cce0ab] to-[#eaf1e0] h-90 w-full items-center py-32 px-6 text-center">
-    <div className="flex flex-col items-center" data-aos="fade-up">
-        <br/>      
-      <p className="text-4xl font-bold text-black mb-4">
+    <section className="bg-gradient-to-b from-[#eaf1e0] via-[#cce0ab] to-[#eaf1e0] h-90 w-full items-center justify-center py-32 px-6 text-center">
+      <div className="flex flex-col items-center" data-aos="fade-up">
+          <br/>      
+        <p className="text-4xl font-bold text-black mb-4">
 
-      ¿Qué estás esperando?
-    </p>
-        <br/>
-    <p className="text-xl text-black mb-8">
-      Empieza hoy de manera gratuita
-    </p>
-        <br/>    
-          <Link href="/registro">
-        <button className="button1 mt-8 bg-[#1e2363] hover:bg-[#151943] text-white font-semibold text-lg px-8 py-3 rounded-full transition shadow-md">
-          Empezar ahora
-        </button>
-      </Link>
-    </div>
+        ¿Qué estás esperando?
+      </p>
+          <br/>
+      <p className="text-xl text-black mb-8">
+        Empieza hoy de manera gratuita
+      </p>
+          <br/>    
+            <Link href="/registro">
+          <button className="button1 mt-8 bg-[#1e2363] hover:bg-[#151943] text-white font-semibold text-lg px-8 py-3 rounded-full transition shadow-md">
+            Empezar ahora
+          </button>
+        </Link>
+      </div>
   </section>
 
     <div className="w-full bg-gradient-to-b from-[#eaf1e0] to-[#f3f3f3] mx-auto mt-16">

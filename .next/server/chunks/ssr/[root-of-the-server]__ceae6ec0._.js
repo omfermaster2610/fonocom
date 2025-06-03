@@ -490,73 +490,98 @@ const Intro = ()=>{
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                    className: "w-full min-h-screen bg-gradient-to-b from-[#cce0b4] via-white to-[#d9dbf7] flex flex-col items-center justify-center px-4 py-20",
+                    className: "w-full min-h-screen bg-gradient-to-b from-[#cce0b4] via-white to-[#BDC3E9] flex flex-col items-center justify-center px-4 py-20",
                     "data-aos-delay": 100,
                     children: [
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "text-6xl sm:text-8xl font-bold text-[#1e2363] text-center",
-                            "data-aos": "fade-up",
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("img", {
+                            src: "/images/fonoconLogo.png",
+                            alt: "Fondo",
+                            className: "absolute z-0 h-2/3 sm:w-96 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/inicio/page.tsx",
+                            lineNumber: 85,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "absolute inset-0 bg-white/10 backdrop-blur-sm z-10"
+                        }, void 0, false, {
+                            fileName: "[project]/src/app/inicio/page.tsx",
+                            lineNumber: 91,
+                            columnNumber: 9
+                        }, this),
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                            className: "relative z-20 flex flex-col items-center justify-center",
                             children: [
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$playfair_display_4d56795d$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].className,
-                                    children: "FONO"
-                                }, void 0, false, {
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "text-6xl sm:text-8xl font-bold text-[#1e2363] text-center",
+                                    "data-aos": "fade-up",
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$playfair_display_4d56795d$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].className,
+                                            children: "FONO"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/inicio/page.tsx",
+                                            lineNumber: 95,
+                                            columnNumber: 13
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                            className: __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$pacifico_794f64bd$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].className,
+                                            children: "Com"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/inicio/page.tsx",
+                                            lineNumber: 96,
+                                            columnNumber: 13
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
                                     fileName: "[project]/src/app/inicio/page.tsx",
-                                    lineNumber: 86,
+                                    lineNumber: 94,
                                     columnNumber: 11
                                 }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                    className: __TURBOPACK__imported__module__$5b$next$5d2f$internal$2f$font$2f$google$2f$pacifico_794f64bd$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"].className,
-                                    children: "Com"
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                    className: "mt-4 text-2xl sm:text-3xl font-light tracking-wide text-center text-black",
+                                    "data-aos": "fade-up",
+                                    children: [
+                                        "Inclusión e ",
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
+                                            className: "sm:hidden"
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/app/inicio/page.tsx",
+                                            lineNumber: 101,
+                                            columnNumber: 25
+                                        }, this),
+                                        " innovación"
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/app/inicio/page.tsx",
+                                    lineNumber: 100,
+                                    columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                    fileName: "[project]/src/app/inicio/page.tsx",
+                                    lineNumber: 103,
+                                    columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/registro",
+                                    children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
+                                        className: "button1 mt-8 bg-[#1e2363] hover:bg-[#151943] text-white font-semibold text-lg px-8 py-3 rounded-full transition shadow-md",
+                                        "data-aos": "fade-up",
+                                        children: "Empezar ahora"
+                                    }, void 0, false, {
+                                        fileName: "[project]/src/app/inicio/page.tsx",
+                                        lineNumber: 106,
+                                        columnNumber: 13
+                                    }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/inicio/page.tsx",
-                                    lineNumber: 87,
+                                    lineNumber: 105,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 85,
-                            columnNumber: 9
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                            className: "mt-4 text-2xl sm:text-3xl font-light tracking-wide text-center text-black",
-                            "data-aos": "fade-up",
-                            children: [
-                                "Inclusión e ",
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {
-                                    className: "sm:hidden"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/inicio/page.tsx",
-                                    lineNumber: 92,
-                                    columnNumber: 23
-                                }, this),
-                                " innovación"
-                            ]
-                        }, void 0, true, {
-                            fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 91,
-                            columnNumber: 9
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
-                            fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 94,
-                            columnNumber: 9
-                        }, this),
-                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
-                            href: "/registro",
-                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
-                                className: "button1 mt-8 bg-[#1e2363] hover:bg-[#151943] text-white font-semibold text-lg px-8 py-3 rounded-full transition shadow-md",
-                                "data-aos": "fade-up",
-                                children: "Empezar ahora"
-                            }, void 0, false, {
-                                fileName: "[project]/src/app/inicio/page.tsx",
-                                lineNumber: 97,
-                                columnNumber: 11
-                            }, this)
-                        }, void 0, false, {
-                            fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 96,
+                            lineNumber: 93,
                             columnNumber: 9
                         }, this)
                     ]
@@ -572,7 +597,7 @@ const Intro = ()=>{
                             className: "h-10 bg-gradient-to-b from-[rgb(217,219,247)] to-[#BDC3E9] flex p-6"
                         }, void 0, false, {
                             fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 106,
+                            lineNumber: 116,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -589,12 +614,12 @@ const Intro = ()=>{
                                         className: "rounded-lg"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 120,
                                         columnNumber: 13
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/inicio/page.tsx",
-                                    lineNumber: 109,
+                                    lineNumber: 119,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -605,10 +630,25 @@ const Intro = ()=>{
                                         children: [
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 className: "text-[#444] mb-6 m-6sm:text-xl font-light",
-                                                children: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore dolorem optio voluptas dolore atque fugiat. Corporis atque magnam quas laboriosam magni possimus reprehenderit debitis animi aliquid, sed fuga impedit officia."
-                                            }, void 0, false, {
+                                                children: [
+                                                    "En ",
+                                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("strong", {
+                                                        children: "FonoCom S.A.S."
+                                                    }, void 0, false, {
+                                                        fileName: "[project]/src/app/inicio/page.tsx",
+                                                        lineNumber: 133,
+                                                        columnNumber: 20
+                                                    }, this),
+                                                    " creemos en un mundo donde cada voz cuenta. Trabajamos para construir puentes hacia un futuro en el que todos puedan ser escuchados y donde la comunicación deje de ser una barrera para convertirse en una oportunidad. Por eso, a través de nuestra plataforma web, ofrecemos servicios diseñados especialmente para personas con discapacidad cognitiva leve, convencidos de que cada desafío representa una oportunidad para crecer, aprender y superar límites."
+                                                ]
+                                            }, void 0, true, {
                                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                                lineNumber: 122,
+                                                lineNumber: 132,
+                                                columnNumber: 15
+                                            }, this),
+                                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
+                                                fileName: "[project]/src/app/inicio/page.tsx",
+                                                lineNumber: 136,
                                                 columnNumber: 15
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -618,40 +658,40 @@ const Intro = ()=>{
                                                     children: "Empieza hoy"
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/app/inicio/page.tsx",
-                                                    lineNumber: 128,
+                                                    lineNumber: 138,
                                                     columnNumber: 17
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                                lineNumber: 127,
+                                                lineNumber: 137,
                                                 columnNumber: 15
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                        lineNumber: 121,
+                                        lineNumber: 131,
                                         columnNumber: 13
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/inicio/page.tsx",
-                                    lineNumber: 120,
+                                    lineNumber: 130,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 107,
+                            lineNumber: 117,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 135,
+                            lineNumber: 145,
                             columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/inicio/page.tsx",
-                    lineNumber: 105,
+                    lineNumber: 115,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -665,12 +705,12 @@ const Intro = ()=>{
                                 children: [
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                        lineNumber: 142,
+                                        lineNumber: 152,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                        lineNumber: 143,
+                                        lineNumber: 153,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -678,7 +718,7 @@ const Intro = ()=>{
                                         children: "Conoce todos nuestros programas:"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                        lineNumber: 145,
+                                        lineNumber: 155,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -689,7 +729,7 @@ const Intro = ()=>{
                                                 children: [
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                                        lineNumber: 151,
+                                                        lineNumber: 161,
                                                         columnNumber: 15
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -702,7 +742,7 @@ const Intro = ()=>{
                                                                         className: `w-4 h-4 rounded-full mr-4 transition ${selectedProgram.id === program.id ? "bg-[#1e2363] shadow" : "bg-gray-600 group-hover:bg-gray-700"}`
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                                                        lineNumber: 163,
+                                                                        lineNumber: 173,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -710,29 +750,29 @@ const Intro = ()=>{
                                                                         children: program.name
                                                                     }, void 0, false, {
                                                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                                                        lineNumber: 170,
+                                                                        lineNumber: 180,
                                                                         columnNumber: 21
                                                                     }, this),
                                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                                                        lineNumber: 179,
+                                                                        lineNumber: 189,
                                                                         columnNumber: 21
                                                                     }, this)
                                                                 ]
                                                             }, program.id, true, {
                                                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                                                lineNumber: 154,
+                                                                lineNumber: 164,
                                                                 columnNumber: 19
                                                             }, this))
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                                        lineNumber: 152,
+                                                        lineNumber: 162,
                                                         columnNumber: 15
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                                lineNumber: 150,
+                                                lineNumber: 160,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -746,7 +786,7 @@ const Intro = ()=>{
                                                             children: selectedProgram.name
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/inicio/page.tsx",
-                                                            lineNumber: 188,
+                                                            lineNumber: 198,
                                                             columnNumber: 17
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -754,12 +794,12 @@ const Intro = ()=>{
                                                             children: selectedProgram.description
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/inicio/page.tsx",
-                                                            lineNumber: 191,
+                                                            lineNumber: 201,
                                                             columnNumber: 17
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                             fileName: "[project]/src/app/inicio/page.tsx",
-                                                            lineNumber: 194,
+                                                            lineNumber: 204,
                                                             columnNumber: 17
                                                         }, this),
                                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
@@ -769,56 +809,56 @@ const Intro = ()=>{
                                                                 children: "Empezar ahora"
                                                             }, void 0, false, {
                                                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                                                lineNumber: 196,
+                                                                lineNumber: 206,
                                                                 columnNumber: 19
                                                             }, this)
                                                         }, void 0, false, {
                                                             fileName: "[project]/src/app/inicio/page.tsx",
-                                                            lineNumber: 195,
+                                                            lineNumber: 205,
                                                             columnNumber: 17
                                                         }, this)
                                                     ]
                                                 }, void 0, true, {
                                                     fileName: "[project]/src/app/inicio/page.tsx",
-                                                    lineNumber: 187,
+                                                    lineNumber: 197,
                                                     columnNumber: 15
                                                 }, this)
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                                lineNumber: 186,
+                                                lineNumber: 196,
                                                 columnNumber: 13
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                        lineNumber: 148,
+                                        lineNumber: 158,
                                         columnNumber: 11
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                lineNumber: 141,
+                                lineNumber: 151,
                                 columnNumber: 9
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 140,
+                            lineNumber: 150,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 203,
+                            lineNumber: 213,
                             columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 204,
+                            lineNumber: 214,
                             columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/inicio/page.tsx",
-                    lineNumber: 139,
+                    lineNumber: 149,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -836,7 +876,7 @@ const Intro = ()=>{
                                             "Apoyar a su comunicación ",
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                                lineNumber: 213,
+                                                lineNumber: 223,
                                                 columnNumber: 38
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -844,33 +884,33 @@ const Intro = ()=>{
                                                 children: "nos importa"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                                lineNumber: 214,
+                                                lineNumber: 224,
                                                 columnNumber: 13
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                        lineNumber: 212,
+                                        lineNumber: 222,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                        lineNumber: 216,
+                                        lineNumber: 226,
                                         columnNumber: 11
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
-                                        className: "text-lg text-black leading-relaxed",
+                                        className: "text-lg text-black leading-relaxed text-justify",
                                         "data-aos": "fade-right",
-                                        children: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce sed tincidunt eros, at tincidunt ante. Aenean ut imperdiet lacus. Morbi efficitur ullamcorper erat, ac vestibulum sapien dignissim at. Morbi posuere, metus et maximus aliquam, lorem quam placerat erat, a gravida justo mauris vestibulum sem."
+                                        children: "En FonoCom, apoyar la comunicación de las personas con discapacidad cognitiva leve no solo nos importa, sino que es el corazón de nuestra misión. Creemos firmemente que la comunicación es una herramienta fundamental para el desarrollo personal, la inclusión social y la autonomía. Por eso, a través de nuestra plataforma web, ofrecemos servicios especializados que fortalecen las habilidades y competencias comunicativas, brindando recursos accesibles y significativos para usuarios, familias y profesionales. Cada esfuerzo que hacemos está orientado a garantizar que estas personas sean escuchadas, comprendidas y valoradas en todos los contextos de su vida."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/inicio/page.tsx",
-                                        lineNumber: 217,
+                                        lineNumber: 227,
                                         columnNumber: 11
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                lineNumber: 211,
+                                lineNumber: 221,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -884,23 +924,23 @@ const Intro = ()=>{
                                     height: 400
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/inicio/page.tsx",
-                                    lineNumber: 224,
+                                    lineNumber: 237,
                                     columnNumber: 11
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                lineNumber: 223,
+                                lineNumber: 236,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/inicio/page.tsx",
-                        lineNumber: 209,
+                        lineNumber: 219,
                         columnNumber: 7
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/inicio/page.tsx",
-                    lineNumber: 208,
+                    lineNumber: 218,
                     columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -913,28 +953,28 @@ const Intro = ()=>{
                                 "Conoce a nuestro equipo ",
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                     fileName: "[project]/src/app/inicio/page.tsx",
-                                    lineNumber: 238,
-                                    columnNumber: 29
+                                    lineNumber: 251,
+                                    columnNumber: 33
                                 }, this),
                                 " de trabajo"
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 237,
-                            columnNumber: 3
+                            lineNumber: 250,
+                            columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 240,
-                            columnNumber: 3
+                            lineNumber: 253,
+                            columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                             fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 241,
-                            columnNumber: 3
+                            lineNumber: 254,
+                            columnNumber: 7
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                            className: "flex flex-wrap justify-center gap-10",
+                            className: "flex flex-wrap justify-center gap-10 h-auto",
                             children: [
                                 {
                                     nombre: "Ana María Collante",
@@ -967,80 +1007,80 @@ const Intro = ()=>{
                                                 className: "object-fill rounded-full"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                                lineNumber: 252,
-                                                columnNumber: 11
+                                                lineNumber: 265,
+                                                columnNumber: 15
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/inicio/page.tsx",
-                                            lineNumber: 251,
-                                            columnNumber: 9
+                                            lineNumber: 264,
+                                            columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                             fileName: "[project]/src/app/inicio/page.tsx",
-                                            lineNumber: 260,
-                                            columnNumber: 9
+                                            lineNumber: 273,
+                                            columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                             className: "mt-4 font-serif font-bold",
                                             children: persona.nombre
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/inicio/page.tsx",
-                                            lineNumber: 261,
-                                            columnNumber: 9
+                                            lineNumber: 274,
+                                            columnNumber: 13
                                         }, this)
                                     ]
                                 }, i, true, {
                                     fileName: "[project]/src/app/inicio/page.tsx",
-                                    lineNumber: 250,
-                                    columnNumber: 7
+                                    lineNumber: 263,
+                                    columnNumber: 11
                                 }, this))
                         }, void 0, false, {
                             fileName: "[project]/src/app/inicio/page.tsx",
-                            lineNumber: 242,
-                            columnNumber: 3
+                            lineNumber: 255,
+                            columnNumber: 7
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/inicio/page.tsx",
-                    lineNumber: 236,
-                    columnNumber: 3
+                    lineNumber: 249,
+                    columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
-                    className: "bg-gradient-to-b from-[#eaf1e0] via-[#cce0ab] to-[#eaf1e0] h-90 w-full items-center py-32 px-6 text-center",
+                    className: "bg-gradient-to-b from-[#eaf1e0] via-[#cce0ab] to-[#eaf1e0] h-90 w-full items-center justify-center py-32 px-6 text-center",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                         className: "flex flex-col items-center",
                         "data-aos": "fade-up",
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                lineNumber: 269,
-                                columnNumber: 9
+                                lineNumber: 282,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-4xl font-bold text-black mb-4",
                                 children: "¿Qué estás esperando?"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                lineNumber: 270,
-                                columnNumber: 7
+                                lineNumber: 283,
+                                columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                lineNumber: 274,
-                                columnNumber: 9
+                                lineNumber: 287,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-xl text-black mb-8",
                                 children: "Empieza hoy de manera gratuita"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                lineNumber: 275,
-                                columnNumber: 5
+                                lineNumber: 288,
+                                columnNumber: 7
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                lineNumber: 278,
-                                columnNumber: 9
+                                lineNumber: 291,
+                                columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
                                 href: "/registro",
@@ -1049,35 +1089,35 @@ const Intro = ()=>{
                                     children: "Empezar ahora"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/inicio/page.tsx",
-                                    lineNumber: 280,
-                                    columnNumber: 9
+                                    lineNumber: 293,
+                                    columnNumber: 11
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/app/inicio/page.tsx",
-                                lineNumber: 279,
-                                columnNumber: 11
+                                lineNumber: 292,
+                                columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/inicio/page.tsx",
-                        lineNumber: 268,
-                        columnNumber: 5
+                        lineNumber: 281,
+                        columnNumber: 7
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/inicio/page.tsx",
-                    lineNumber: 267,
-                    columnNumber: 3
+                    lineNumber: 280,
+                    columnNumber: 5
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                     className: "w-full bg-gradient-to-b from-[#eaf1e0] to-[#f3f3f3] mx-auto mt-16",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$footer$2e$tsx__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                         fileName: "[project]/src/app/inicio/page.tsx",
-                        lineNumber: 288,
+                        lineNumber: 301,
                         columnNumber: 7
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/inicio/page.tsx",
-                    lineNumber: 287,
+                    lineNumber: 300,
                     columnNumber: 5
                 }, this)
             ]
