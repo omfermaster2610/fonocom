@@ -10,41 +10,46 @@ export default function RegisterPage() {
   const router = useRouter()
   const [form, setForm] = useState({ username: "", password: "", confirm: "" })
   const [error, setError] = useState("")
-  const [loading] = useState(false)
+  const [loading, setLoading] = useState(false);
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value })
   }
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setError("")
-
-    if (form.password !== form.confirm) {
-      setError("Las contraseñas no coinciden")
-      return
-    }
-
-    try {
-      const res = await fetch("/api/usuario/registro", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username: form.username, password: form.password }),
-      })
-
-      const data = await res.json()
-
-      if (res.ok && data.success) {
-        alert("Usuario registrado correctamente")
-        localStorage.setItem("user", JSON.stringify(data.user))
-        router.push("/homepage")
-      } else {
-        setError(data.message || "Error al registrar")
-      }
-    } catch {
-      setError("Error de conexión")
-    }
+  e.preventDefault();
+  setError("");
+  
+  if (form.password !== form.confirm) {
+    setError("Las contraseñas no coinciden");
+    return;
   }
+  
+  setLoading(true);
+  try {
+    const res = await fetch("/api/usuario/registro", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ username: form.username, password: form.password }),
+    });
+  
+    const data = await res.json();
+  
+    if (res.ok && data.success) {
+      alert("Usuario registrado correctamente");
+      localStorage.setItem("user", JSON.stringify(data.user));
+      router.push("/homepage");
+    } else {
+      setError(data.message || "Error al registrar");
+    }
+  } catch (error) {
+    setError("Error de conexión");
+    console.error(error);
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <main className="min-h-screen grid grid-cols-1 md:grid-cols-2">

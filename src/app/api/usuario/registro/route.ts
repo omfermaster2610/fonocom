@@ -1,6 +1,6 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from 'next/server'
-import fs from 'fs'
-import path from 'path'
+import { guardarUsuario, obtenerUsuario } from '@/usuarios/usuarioService'
 
 export async function POST(req: Request) {
   try {
@@ -13,29 +13,17 @@ export async function POST(req: Request) {
       )
     }
 
-    const filePath = path.join(process.cwd(), 'data', 'data.json')
-    const rawData = fs.existsSync(filePath)
-      ? fs.readFileSync(filePath, 'utf-8')
-      : '[]'
-
-    const users = JSON.parse(rawData)
-
-    if (!Array.isArray(users)) {
-      return NextResponse.json(
-        { success: false, message: 'Datos corruptos' },
-        { status: 500 }
-      )
-    }
-
-    const exists = users.some((u) => u.username === username)
-    if (exists) {
+    // Verifica si el usuario ya existe en la base de datos
+    const existente = await obtenerUsuario(username)
+    if (existente) {
       return NextResponse.json(
         { success: false, message: 'Usuario ya existe' },
         { status: 409 }
       )
     }
 
-    const newUser = {
+    // Guardar nuevo usuario en la base de datos
+    await guardarUsuario({
       username,
       password,
       progreso: {
@@ -43,15 +31,9 @@ export async function POST(req: Request) {
         empleo: 0,
         ideas: 0,
       },
-    }
+    } as any)
 
-    users.push(newUser)
-    fs.writeFileSync(filePath, JSON.stringify(users, null, 2), 'utf-8')
-
-    const userResponse = { ...newUser }
-    delete userResponse.password // Opcional
-
-    return NextResponse.json({ success: true, user: userResponse })
+    return NextResponse.json({ success: true, user: { username } })
   } catch (error) {
     console.error('ERROR REGISTRO:', error)
     return NextResponse.json(

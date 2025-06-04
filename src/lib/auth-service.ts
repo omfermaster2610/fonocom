@@ -1,13 +1,9 @@
-import fs from "fs"
-import path from "path"
+import { db } from "./db"
 
 export interface User {
   id: number
   username: string
   password: string
-  name: string
-  email: string
-  role: string
 }
 
 export interface LoginResponse {
@@ -17,48 +13,14 @@ export interface LoginResponse {
 }
 
 class AuthService {
-  private usersFilePath: string
-
-  constructor() {
-    this.usersFilePath = path.join(process.cwd(), "data", "data.json")
-  }
-
-  private loadUsers(): User[] {
+  public async authenticate(username: string, password: string): Promise<LoginResponse> {
     try {
-      // Crear directorio si no existe
-      const dataDir = path.dirname(this.usersFilePath)
-      if (!fs.existsSync(dataDir)) {
-        fs.mkdirSync(dataDir, { recursive: true })
-      }
+      const [rows] = await db.execute(
+        "SELECT * FROM usuarios WHERE username = ? AND password = ?",
+        [username, password]
+      )
 
-      // Crear archivo si no existe
-      if (!fs.existsSync(this.usersFilePath)) {
-        const defaultUsers: User[] = [
-          {
-            id: 1,
-            username: "admin",
-            password: "123456",
-            name: "Administrador",
-            email: "admin@example.com",
-            role: "admin",
-          },
-        ]
-        fs.writeFileSync(this.usersFilePath, JSON.stringify(defaultUsers, null, 2))
-      }
-
-      const fileContent = fs.readFileSync(this.usersFilePath, "utf-8")
-      return JSON.parse(fileContent)
-    } catch (error) {
-      console.error("Error loading users:", error)
-      return []
-    }
-  }
-
-  public authenticate(username: string, password: string): LoginResponse {
-    try {
-      const users = this.loadUsers()
-
-      const user = users.find((u) => u.username === username && u.password === password)
+      const user = (rows as User[])[0]
 
       if (user) {
         const { password: _, ...userWithoutPassword } = user
@@ -81,9 +43,14 @@ class AuthService {
     }
   }
 
-  public getAllUsers(): Omit<User, "password">[] {
-    const users = this.loadUsers()
-    return users.map(({ password, ...user }) => user)
+  public async getAllUsers(): Promise<Omit<User, "password">[]> {
+    try {
+      const [rows] = await db.execute("SELECT id, username FROM usuarios")
+      return rows as Omit<User, "password">[]
+    } catch (error) {
+      console.error("Error al obtener usuarios:", error)
+      return []
+    }
   }
 }
 

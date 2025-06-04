@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from 'next/server'
-import fs from 'fs'
-import path from 'path'
+import { obtenerUsuario } from '@/usuarios/usuarioService'
 
 export async function GET(request: Request) {
   const { searchParams } = new URL(request.url)
@@ -14,19 +12,23 @@ export async function GET(request: Request) {
     )
   }
 
-  const filePath = path.join(process.cwd(), 'data', 'data.json')
-  const jsonData = fs.readFileSync(filePath, 'utf-8')
-  const usuarios = JSON.parse(jsonData)
+  try {
+    const usuario = await obtenerUsuario(username)
 
-  const usuario = usuarios.find((u: any) => u.username === username)
+    if (!usuario) {
+      return NextResponse.json(
+        { success: false, message: 'Usuario no encontrado' },
+        { status: 404 }
+      )
+    }
 
-  if (!usuario) {
+    const { password, ...userSinPass } = usuario
+    return NextResponse.json(userSinPass)
+  } catch (error) {
+    console.error('ERROR OBTENER USUARIO:', error)
     return NextResponse.json(
-      { success: false, message: 'Usuario no encontrado' },
-      { status: 404 }
+      { success: false, message: 'Error del servidor' },
+      { status: 500 }
     )
   }
-
-  const { password, ...userSinPass } = usuario
-  return NextResponse.json(userSinPass)
 }

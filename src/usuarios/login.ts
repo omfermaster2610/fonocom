@@ -1,10 +1,10 @@
-import { obtenerUsuario } from "./usuarioService";
+import { obtenerUsuario } from './usuarioService';
 
-export function validarLogin(username: string, password: string) {
-  const usuario = obtenerUsuario(username);
+export async function validarLogin(username: string, password: string) {
+  const usuario = await obtenerUsuario(username);
   if (!usuario) return null;
 
-  // Compara contraseña (aquí en texto plano, idealmente con hash)
+  // Compara contraseña (ideal: hash con bcrypt)
   if (usuario.password === password) {
     return usuario;
   }

@@ -21,7 +21,7 @@ export default function UsuarioPage() {
   const [usuario, setUsuario] = useState<Usuario | null>(null)
   const [form, setForm] = useState({ username: '', password: '' })
   const router = useRouter()
-
+  const [loading, setLoading] = useState(false);
 
   const cerrarSesion = () => {
     localStorage.removeItem('user')
@@ -38,38 +38,39 @@ useEffect(() => {
   console.log("Buscando usuario:", username)
 
   fetch(`/api/usuario?username=${username}`)
-    .then(res => res.json())
-    .then(data => {
-      console.log("Usuario encontrado:", data)
-      setUsuario(data)
-      setForm({ username: data.username, password: '' })
-    })
-    .catch(err => console.error("Error al obtener usuario:", err))
+  .then(res => {
+    if(!res.ok) throw new Error('No encontrado');
+    return res.json();
+  })
+  .then(data => {
+    setUsuario(data);
+    setForm({ username: data.username, password: '' });
+  })
+  .catch(err => {
+    console.error("Error al obtener usuario:", err);
+    setUsuario(null);
+  });
 }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault()
-
-  const userActual = JSON.parse(localStorage.getItem("user") || "{}")
-
-  const res = await fetch('/api/usuario/actualizar', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      username: userActual.username,       // El actual, para saber cuál cambiar
-      newUsername: form.username,          // El nuevo (puede ser el mismo)
-      newPassword: form.password           // La nueva contraseña (o la misma)
-    }),
-  })
-
+  e.preventDefault();
+  setLoading(true);
+try {
+  const res = await fetch('/api/usuario/actualizar', { /*...*/ });
   if (res.ok) {
-    const data = await res.json()
-    setUsuario(data.user) // O como estés manejando el estado
-    localStorage.setItem("user", JSON.stringify(data.user)) // Actualiza el localStorage
-    alert('Datos actualizados correctamente')
+    const data = await res.json();
+    setUsuario(data.user);
+    localStorage.setItem("user", JSON.stringify(data.user));
+    alert('Datos actualizados correctamente');
   } else {
-    alert('Error al actualizar')
+    alert('Error al actualizar');
   }
+} catch (error) {
+  alert('Error de conexión');
+  console.error(error);
+} finally {
+  setLoading(false);
+}
 }
 
 
@@ -100,7 +101,7 @@ useEffect(() => {
         </section>
         <br/>
         <section>
-            <p className="dlex flex-col text-xl font-semibold mb-4">Modificar usuario</p>
+            <p className="flex flex-col text-xl font-semibold mb-4">Modificar usuario</p>
             <form onSubmit={handleSubmit} className="space-y-4">
           <div>
             <label htmlFor="username" className="block font-semibold">
@@ -130,9 +131,10 @@ useEffect(() => {
           <br/>
           <button
             type="submit"
+            disabled={loading}
             className="button bg-lime-500 px-4 py-2 rounded font-bold"
           >
-            Guardar
+            {loading ? "Guardando..." : "Guardar"}
           </button>
         </form>
         </section>

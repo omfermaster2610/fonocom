@@ -8,22 +8,23 @@ export default function HomePage() {
   const [usuario, setUsuario] = useState<usuario | null>(null)
 
 useEffect(() => {
-  const saved = localStorage.getItem('user')
-  console.log("Usuario guardado:", saved)
+  async function fetchUsuario() {
+    const saved = localStorage.getItem('user');
+    if (!saved) return;
 
-  if (!saved) return
+    const { username } = JSON.parse(saved);
 
-  const { username } = JSON.parse(saved)
-  console.log("Buscando usuario:", username)
-
-  fetch(`/api/usuario?username=${username}`)
-    .then(res => res.json())
-    .then(data => {
-      console.log("Usuario encontrado:", data)
-      setUsuario(data)
-    })
-    .catch(err => console.error("Error al obtener usuario:", err))
-}, [])
+    try {
+      const res = await fetch(`/api/usuario?username=${username}`);
+      if (!res.ok) throw new Error('Error al obtener usuario');
+      const data = await res.json();
+      setUsuario(data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+  fetchUsuario();
+}, []);
 
 
   return (

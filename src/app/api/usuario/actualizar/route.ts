@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
-import fs from 'fs'
-import path from 'path'
+import { obtenerUsuario, guardarUsuario } from '@/usuarios/usuarioService'
 
 export async function POST(req: Request) {
   try {
@@ -13,30 +12,9 @@ export async function POST(req: Request) {
       )
     }
 
-    const filePath = path.join(process.cwd(), 'data', 'data.json')
-
-    if (!fs.existsSync(filePath)) {
-      return NextResponse.json(
-        { success: false, message: 'Archivo no encontrado' },
-        { status: 500 }
-      )
-    }
-
-    const rawData = fs.readFileSync(filePath, 'utf-8')
-    const users = JSON.parse(rawData)
-
-    // Verificar que sea un array
-    if (!Array.isArray(users)) {
-      return NextResponse.json(
-        { success: false, message: 'Formato inválido de datos' },
-        { status: 500 }
-      )
-    }
-
-    // Buscar usuario por username
-    const userIndex = users.findIndex((u) => u.username === username)
-
-    if (userIndex === -1) {
+    // Obtener usuario actual
+    const usuario = await obtenerUsuario(username)
+    if (!usuario) {
       return NextResponse.json(
         { success: false, message: 'Usuario no encontrado' },
         { status: 404 }
@@ -44,16 +22,15 @@ export async function POST(req: Request) {
     }
 
     // Actualizar datos
-    users[userIndex].username = newUsername
-    users[userIndex].password = newPassword
+    usuario.username = newUsername
+    usuario.password = newPassword
 
-    // Guardar cambios
-    fs.writeFileSync(filePath, JSON.stringify(users, null, 2), 'utf-8')
+    // Guardar usuario actualizado (usuarioService también actualiza progreso)
+    await guardarUsuario(usuario)
 
-    const updatedUser = { ...users[userIndex] }
-    delete updatedUser.password // Opcional: ocultar password al devolver
+    const { password, ...usuarioSinPass } = usuario
 
-    return NextResponse.json({ success: true, user: updatedUser })
+    return NextResponse.json({ success: true, user: usuarioSinPass })
   } catch (error) {
     console.error('ERROR AL ACTUALIZAR:', error)
     return NextResponse.json(
