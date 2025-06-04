@@ -24,10 +24,12 @@ export default function LoginPage() {
 
     try {
       const res = await fetch("/api/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      })
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        username: String(formData.username),
+        password: String(formData.password),
+      }),})
 
       const data = await res.json()
 

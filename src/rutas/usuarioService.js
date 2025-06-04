@@ -1,22 +1,13 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
-import { db } from '../lib/db';
-import type { Usuario, Progreso } from './usuario';
+/* eslint-disable import/no-anonymous-default-export */
+/* eslint-disable no-unused-vars */
+import db from '../lib/js/db.js';
 
-export interface usuario {
-  username: string
-  password: string
-  progreso: {
-    comunicacion: number
-    empleo: number
-    ideas: number
-  }
-}
 
-export async function obtenerUsuario(username: string): Promise<Usuario | null> {
+async function obtenerUsuario(username) {
   const resUsuario = await db.query('SELECT * FROM usuarios WHERE username = $1', [username]);
   if (resUsuario.rows.length === 0) return null;
 
-  const usuario = resUsuario.rows[0] as Usuario;
+  const usuario = resUsuario.rows[0];
 
   // Obtener progreso separado
   const resProgreso = await db.query(
@@ -24,7 +15,7 @@ export async function obtenerUsuario(username: string): Promise<Usuario | null> 
     [usuario.id]
   );
 
-  const progreso = (resProgreso.rows[0] as Progreso) || {
+  const progreso = resProgreso.rows[0] || {
     comunicacion: 0,
     empleo: 0,
     ideas: 0,
@@ -33,8 +24,7 @@ export async function obtenerUsuario(username: string): Promise<Usuario | null> 
   return { ...usuario, progreso };
 }
 
-
-export async function guardarUsuario(usuario: Usuario): Promise<void> {
+async function guardarUsuario(usuario) {
   // Insertar o actualizar el usuario usando ON CONFLICT
   const res = await db.query(
     `INSERT INTO usuarios (username, password)
@@ -63,21 +53,19 @@ export async function guardarUsuario(usuario: Usuario): Promise<void> {
   );
 }
 
-
-export async function obtenerProgreso(usuarioid: number): Promise<Progreso> {
+async function obtenerProgreso(usuarioid) {
   const res = await db.query(
     'SELECT comunicacion, empleo, ideas FROM progreso WHERE usuarioid = $1',
     [usuarioid]
   );
-  return (res.rows[0] as Progreso) || {
+  return res.rows[0] || {
     comunicacion: 0,
     empleo: 0,
     ideas: 0,
   };
 }
 
-
-export async function actualizarProgreso(usuarioid: number, nuevoProgreso: Progreso): Promise<void> {
+async function actualizarProgreso(usuarioid, nuevoProgreso) {
   await db.query(
     `UPDATE progreso SET comunicacion = $1, empleo = $2, ideas = $3 WHERE usuarioid = $4`,
     [
@@ -89,3 +77,9 @@ export async function actualizarProgreso(usuarioid: number, nuevoProgreso: Progr
   );
 }
 
+export default {
+  obtenerUsuario,
+  guardarUsuario,
+  obtenerProgreso,
+  actualizarProgreso,
+};

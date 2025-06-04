@@ -7,6 +7,6 @@ export interface Progreso {
 export interface Usuario {
   id: number
   username: string
-  password?: string
+  password: string
   progreso: Progreso
 }

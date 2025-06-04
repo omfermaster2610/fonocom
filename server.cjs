@@ -1,26 +1,28 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-const express = require('express')
-const cors = require('cors')
-const app = express()
+const express = require('express');
+const cors = require('cors');
+const app = express();
 
-const port = process.env.PORT || 3001
+const port = process.env.PORT || 3001;
 
 // Middlewares
-app.use(cors())
-app.use(express.json())
+app.use(cors());
+app.use(express.json());
 
-// Rutas
-(async () => {
-  const usuarioRoutes = await import('./src/rutas/usuario.js')
-  app.use('/api/usuario', usuarioRoutes.default)
-})()
+// Función async para iniciar el servidor solo cuando rutas estén listas
+async function startServer() {
+  const usuarioRoutes = await import('./src/rutas/usuario.js');
+  app.use('/api/usuario', usuarioRoutes.default);
 
-// Ruta de prueba
-app.get('/', (req, res) => {
-  res.send('API corriendo correctamente')
-})
+  // Ruta de prueba
+  app.get('/', (req, res) => {
+    res.send('API corriendo correctamente');
+  });
 
-// Iniciar servidor
-app.listen(port, () => {
-  console.log(`Servidor escuchando en http://localhost:${port}`)
-})
+  // Iniciar servidor
+  app.listen(port, () => {
+    console.log(`Servidor escuchando en http://localhost:${port}`);
+  });
+}
+
+startServer();
