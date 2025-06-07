@@ -65,53 +65,32 @@ export default function LoginPage() {
         <div className="w-full max-w-md">
             <p className="text-3xl font-bold mb-6 text-gray-800">Iniciar Sesión</p>
             <br/>
-            <form onSubmit={handleSubmit} className="space-y-4">
-              <div>
-                <label htmlFor="username" className="block mb-1 font-medium">
-                  Usuario
-                </label>
-                <br/>
-                <input
-                  id="username"
-                  name="username"
-                  type="text"
-                  value={formData.username}
-                  onChange={handleInputChange}
-                  required
-                  disabled={loading}
-                  className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Tu usuario"
-                />
-              </div>
-              <br/>
-              <div>
-                <label htmlFor="password" className="block mb-1 font-medium">
-                  Contraseña
-                </label>
-                <br/>
-                <input
-                  id="password"
-                  name="password"
-                  type="password"
-                  value={formData.password}
-                  onChange={handleInputChange}
-                  required
-                  disabled={loading}
-                  className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  placeholder="Tu contraseña"
-                />
-              </div>
-              <br/>
-              {error && (
-                <div className="text-red-600 text-center font-medium">{error}</div>
-              )}
-
+            <form onSubmit={handleSubmit} className="flex flex-col gap-4">
+              <input
+                type="username"
+                name="username"
+                placeholder="Nombre de usuario"
+                value={formData.username}
+                onChange={handleInputChange}
+                className="p-3 rounded-lg border border-gray-300"
+                required
+              />
+              <input
+                type="password"
+                name="password"
+                placeholder="Contraseña"
+                value={formData.password}
+                onChange={handleInputChange}
+                className="p-3 rounded-lg border border-gray-300"
+                required
+              />
+              {error && <p className="text-red-500 mt-4">{error}</p>}
               <button
                 type="submit"
                 disabled={loading}
-                className="button w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition disabled:opacity-50"
+                className="button bg-blue-500 text-white py-2 px-4 rounded"
               >
-                {loading ? "Iniciando sesión..." : "Iniciar Sesión"}
+                {loading ? "Cargando..." : "Iniciar sesión"}
               </button>
             </form>
             <br/>

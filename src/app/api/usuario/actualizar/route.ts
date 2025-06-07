@@ -1,41 +1,49 @@
 import { NextResponse } from 'next/server'
-import { obtenerUsuario, guardarUsuario } from '@/usuarios/usuarioService'
+import db from '../../../../../db'
 
 export async function POST(req: Request) {
   try {
-    const { username, newUsername, newPassword } = await req.json()
+    console.log('🟢 Entró a POST /api/usuario/actualizar');
+    const body = await req.json()
+    const { username, password, id } = body
 
-    if (!username || !newUsername || !newPassword) {
-      return NextResponse.json(
-        { success: false, message: 'Faltan datos' },
-        { status: 400 }
-      )
+    if (!username || !password) {
+      return NextResponse.json({ error: 'Faltan datos' }, { status: 400 })
     }
 
-    // Obtener usuario actual
-    const usuario = await obtenerUsuario(username)
-    if (!usuario) {
-      return NextResponse.json(
-        { success: false, message: 'Usuario no encontrado' },
-        { status: 404 }
-      )
-    }
-
-    // Actualizar datos
-    usuario.username = newUsername
-    usuario.password = newPassword
-
-    // Guardar usuario actualizado (usuarioService también actualiza progreso)
-    await guardarUsuario(usuario)
-
-    const { password, ...usuarioSinPass } = usuario
-
-    return NextResponse.json({ success: true, user: usuarioSinPass })
-  } catch (error) {
-    console.error('ERROR AL ACTUALIZAR:', error)
-    return NextResponse.json(
-      { success: false, message: 'Error del servidor' },
-      { status: 500 }
+    // Actualiza el password del usuario y devuelve sus datos
+    const result = await db.query(
+      `UPDATE usuarios SET password = $1, username = $2 where id = $3 RETURNING id, username`,
+      [password, username, id]
     )
+
+    if (result.rowCount === 0) {
+      return NextResponse.json({ error: 'Usuario no encontrado' }, { status: 404 })
+    }
+
+    const user = result.rows[0]
+
+    // Consulta su progreso por idusuario (no username)
+    const progresoRes = await db.query(
+  `SELECT comunicacion, empleo, ideas FROM progreso WHERE usuarioid = $1`,
+  [user.id]
+)
+
+    const progreso = progresoRes.rows[0] || {
+      comunicacion: 0,
+      empleo: 0,
+      ideas: 0,
+    }
+
+    return NextResponse.json({
+      user: {
+        username: user.username,
+        password: '',
+        progreso,
+      },
+    })
+  } catch (err) {
+    console.error('Error al actualizar usuario:', err)
+    return NextResponse.json({ error: 'Error interno del servidor' }, { status: 500 })
   }
 }

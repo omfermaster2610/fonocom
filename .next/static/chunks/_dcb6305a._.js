@@ -248,21 +248,20 @@ function HomePage() {
     const [usuario, setUsuario] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "HomePage.useEffect": ()=>{
-            const saved = localStorage.getItem('user');
-            console.log("Usuario guardado:", saved);
-            if (!saved) return;
-            const { username } = JSON.parse(saved);
-            console.log("Buscando usuario:", username);
-            fetch(`/api/usuario?username=${username}`).then({
-                "HomePage.useEffect": (res)=>res.json()
-            }["HomePage.useEffect"]).then({
-                "HomePage.useEffect": (data)=>{
-                    console.log("Usuario encontrado:", data);
+            async function fetchUsuario() {
+                const saved = localStorage.getItem('user');
+                if (!saved) return;
+                const { username } = JSON.parse(saved);
+                try {
+                    const res = await fetch(`/api/usuario?username=${username}`);
+                    if (!res.ok) throw new Error('Error al obtener usuario');
+                    const data = await res.json();
                     setUsuario(data);
+                } catch (error) {
+                    console.error(error);
                 }
-            }["HomePage.useEffect"]).catch({
-                "HomePage.useEffect": (err)=>console.error("Error al obtener usuario:", err)
-            }["HomePage.useEffect"]);
+            }
+            fetchUsuario();
         }
     }["HomePage.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -283,13 +282,6 @@ function HomePage() {
                                     className: "w-6 h-0.5 bg-black"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/header.tsx",
-                                    lineNumber: 39,
-                                    columnNumber: 11
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-6 h-0.5 bg-black"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/header.tsx",
                                     lineNumber: 40,
                                     columnNumber: 11
                                 }, this),
@@ -299,11 +291,18 @@ function HomePage() {
                                     fileName: "[project]/src/app/header.tsx",
                                     lineNumber: 41,
                                     columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "w-6 h-0.5 bg-black"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/header.tsx",
+                                    lineNumber: 42,
+                                    columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/header.tsx",
-                            lineNumber: 38,
+                            lineNumber: 39,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -314,18 +313,18 @@ function HomePage() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/header.tsx",
-                            lineNumber: 44,
+                            lineNumber: 45,
                             columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/header.tsx",
-                    lineNumber: 32,
+                    lineNumber: 33,
                     columnNumber: 7
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/header.tsx",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$sidebar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -333,7 +332,7 @@ function HomePage() {
                 onClose: ()=>setIsOpen(false)
             }, void 0, false, {
                 fileName: "[project]/src/app/header.tsx",
-                lineNumber: 50,
+                lineNumber: 51,
                 columnNumber: 7
             }, this)
         ]

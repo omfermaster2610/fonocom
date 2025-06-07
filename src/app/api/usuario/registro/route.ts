@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { NextResponse } from 'next/server'
-import { guardarUsuario, obtenerUsuario } from '@/usuarios/usuarioService'
+import { registrarUsuario, obtenerUsuario } from '@/usuarios/usuarioService'
 
 export async function POST(req: Request) {
   try {
@@ -13,7 +12,7 @@ export async function POST(req: Request) {
       )
     }
 
-    // Verifica si el usuario ya existe en la base de datos
+    // Verifica si el usuario ya existe
     const existente = await obtenerUsuario(username)
     if (existente) {
       return NextResponse.json(
@@ -22,18 +21,17 @@ export async function POST(req: Request) {
       )
     }
 
-    // Guardar nuevo usuario en la base de datos
-    await guardarUsuario({
-      username,
-      password,
-      progreso: {
-        comunicacion: 0,
-        empleo: 0,
-        ideas: 0,
-      },
-    } as any)
+    // Crear nuevo usuario y su progreso
+    const nuevoUsuario = await registrarUsuario({ username, password })
 
-    return NextResponse.json({ success: true, user: { username } })
+    return NextResponse.json({
+      success: true,
+      user: {
+        id: nuevoUsuario.id,
+        username: nuevoUsuario.username,
+      },
+    }, { status: 201 })
+
   } catch (error) {
     console.error('ERROR REGISTRO:', error)
     return NextResponse.json(

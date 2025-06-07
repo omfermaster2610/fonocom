@@ -1,13 +1,17 @@
+// app/api/login/route.js
 import { NextResponse } from "next/server";
-import { validarLogin } from "@/usuarios/login";
+import { validarLogin } from "@/usuarios/login"; // Asegúrate de que esta ruta es válida
 
 export async function POST(request) {
   try {
-    const { username, password } = await request.json();
+    // Obtener y parsear el cuerpo de la solicitud
+    const body = await request.json();
+    const { username, password } = body;
 
+    // Validación básica de datos
     if (
-      typeof username !== 'string' ||
-      typeof password !== 'string' ||
+      typeof username !== "string" ||
+      typeof password !== "string" ||
       !username.trim() ||
       !password.trim()
     ) {
@@ -17,11 +21,13 @@ export async function POST(request) {
       );
     }
 
-    console.log('Tipo de username:', typeof username, 'Valor:', username);
-    console.log('Tipo de password:', typeof password, 'Valor:', password);
+    // Log para depuración (puedes eliminarlo en producción)
+    console.log("Intento de login con:", { username, password });
 
-    const usuario = await validarLogin(username, password);
+    // Verificación con la base de datos
+    const usuario = await validarLogin(username.trim(), password.trim());
 
+    // Si no se encuentra usuario válido
     if (!usuario) {
       return NextResponse.json(
         { success: false, message: "Credenciales incorrectas" },
@@ -29,8 +35,10 @@ export async function POST(request) {
       );
     }
 
+    // Eliminar contraseña del objeto antes de enviarlo al frontend
     const { password: _, ...usuarioSinPassword } = usuario;
 
+    // Respuesta exitosa
     return NextResponse.json({
       success: true,
       user: usuarioSinPassword,

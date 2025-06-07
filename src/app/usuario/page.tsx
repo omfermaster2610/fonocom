@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 'use client'
 
 import { useEffect, useState } from 'react'
@@ -8,6 +7,7 @@ import { useRouter } from 'next/navigation'
 
 
 interface Usuario {
+  id: number
   username: string
   password: string
   progreso: {
@@ -16,7 +16,6 @@ interface Usuario {
     ideas: number
   }
 }
-
 export default function UsuarioPage() {
   const [usuario, setUsuario] = useState<Usuario | null>(null)
   const [form, setForm] = useState({ username: '', password: '' })
@@ -28,51 +27,58 @@ export default function UsuarioPage() {
     router.push('/login')
   }
 
-useEffect(() => {
-  const saved = localStorage.getItem('user')
-  console.log("Usuario guardado:", saved)
+  useEffect(() => {
+    const saved = localStorage.getItem('user')
+    console.log("Usuario guardado:", saved)
 
-  if (!saved) return
+    if (!saved) return
 
-  const { username } = JSON.parse(saved)
-  console.log("Buscando usuario:", username)
+    const { username } = JSON.parse(saved)
+    console.log("Buscando usuario:", username)
 
-  fetch(`/api/usuario?username=${username}`)
-  .then(res => {
-    if(!res.ok) throw new Error('No encontrado');
-    return res.json();
-  })
-  .then(data => {
-    setUsuario(data);
-    setForm({ username: data.username, password: '' });
-  })
-  .catch(err => {
-    console.error("Error al obtener usuario:", err);
-    setUsuario(null);
-  });
-}, [])
+    fetch(`/api/usuario?username=${username}`)
+      .then(res => {
+        if (!res.ok) throw new Error('No encontrado');
+        return res.json();
+      })
+      .then(data => {
+        setUsuario(data);
+        setForm({ username: data.username, password: '' });
+      })
+      .catch(err => {
+        console.error("Error al obtener usuario:", err);
+        setUsuario(null);
+      });
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setLoading(true);
-try {
-  const res = await fetch('/api/usuario/actualizar', { /*...*/ });
-  if (res.ok) {
-    const data = await res.json();
-    setUsuario(data.user);
-    localStorage.setItem("user", JSON.stringify(data.user));
-    alert('Datos actualizados correctamente');
-  } else {
-    alert('Error al actualizar');
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const res = await fetch('/api/usuario/actualizar', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        username: form.username,
+        password: form.password,
+        id: usuario?.id
+      })
+    });
+      if (res.ok) {
+        const data = await res.json();
+        setUsuario(data.user);
+        localStorage.setItem("user", JSON.stringify(data.user));
+        alert('Datos actualizados correctamente');
+      } else {
+        alert('Error al actualizar');
+      }
+    } catch (error) {
+      alert('Error de conexión');
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   }
-} catch (error) {
-  alert('Error de conexión');
-  console.error(error);
-} finally {
-  setLoading(false);
-}
-}
-
 
   return (
     <>

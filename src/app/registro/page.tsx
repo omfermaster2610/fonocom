@@ -108,7 +108,7 @@ export default function RegisterPage() {
             </button>
           </form>
           <br/>
-          <p className="text-sm mt-4 underline">
+          <p className="text-sm text-center mt-4 underline">
             ¿Ya tienes una cuenta?{" "}
             <Link href="/login" className="text-blue-600 underline">Inicia sesión.</Link>
                           <br/>

@@ -162,7 +162,6 @@ async function obtenerUsuario(username) {
     };
 }
 async function guardarUsuario(usuario) {
-    // Insertar o actualizar el usuario usando ON CONFLICT
     const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].query(`INSERT INTO usuarios (username, password)
      VALUES ($1, $2)
      ON CONFLICT (username) DO UPDATE SET password = EXCLUDED.password

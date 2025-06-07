@@ -35,7 +35,6 @@ export async function obtenerUsuario(username: string): Promise<Usuario | null> 
 
 
 export async function guardarUsuario(usuario: Usuario): Promise<void> {
-  // Insertar o actualizar el usuario usando ON CONFLICT
   const res = await db.query(
     `INSERT INTO usuarios (username, password)
      VALUES ($1, $2)
@@ -63,6 +62,22 @@ export async function guardarUsuario(usuario: Usuario): Promise<void> {
   );
 }
 
+export async function registrarUsuario({ username, password }: { username: string, password: string }) {
+  const res = await db.query(
+    `INSERT INTO usuarios (username, password) VALUES ($1, $2) RETURNING id, username`,
+    [username, password]
+  )
+
+  const nuevoUsuario = res.rows[0]
+
+  await db.query(
+    `INSERT INTO progreso (usuarioid, comunicacion, empleo, ideas) VALUES ($1, 0, 0, 0)`,
+    [nuevoUsuario.id]
+  )
+
+  return nuevoUsuario
+}
+
 
 export async function obtenerProgreso(usuarioid: number): Promise<Progreso> {
   const res = await db.query(
@@ -88,4 +103,3 @@ export async function actualizarProgreso(usuarioid: number, nuevoProgreso: Progr
     ]
   );
 }
-
