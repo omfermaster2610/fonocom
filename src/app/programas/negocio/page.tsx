@@ -20,30 +20,21 @@ const empleo = () => {
       </div>
       <section>
         <br></br>
-        <h1 className="text-xl font-extrabold">Descripción</h1>
-        <p className='text-sm  font-light'>Este programa cubre los conceptos fundamentales de la comunicación enfocada en los negocios y el emprendimiento...</p>
+        <h1 className="font-semibold">Descripción</h1>
+        <p>Este programa cubre los conceptos fundamentales de la comunicación enfocada en los negocios y el emprendimiento...</p>
       </section>
       <br></br>
-      <h1>Introducción</h1>
       <section className='space-y-1 w-fit flex'>
         <div>
           <p className="text-xl font-semibold">Introducción:</p>
           <p>
             Una idea de negocio es una propuesta inicial que identifica una necesidad en el mercado y plantea una solución a través de un producto o servicio. Su objetivo es generar valor económico y social, respondiendo a las demandas de los consumidores.
           </p>
-          <br/>
-          <p className="text-xl font-semibold">Objetivos:</p>
-          <p>
-            A continuación, encontrarás actividades diseñadas para fortalecer tus habilidades en la creación y visualización de un emprendimiento dentro del entorno del mercado.
-          </p>
         </div>
-          <aside className=" w-64 p-4 border-l border-gray-300 shrink-0">
-            <img src="/images/negocio.png" alt="Negocio" className='w-192 h-192' />
-          </aside>
       </section>
         <br></br>
           <div className="p-4 gap-10">
-            <p className="text-xl font-semibold">Contenido Programático</p>
+            <p className="text-lg font-semibold">Contenido Programático</p>
             <div className="mt-8">       
               <br/>
               <div className="flex flex-row gap-6 max-w-full">
@@ -67,6 +58,9 @@ const empleo = () => {
             </div>
           </div>
         </div>
+        <aside className=" w-64 p-4 border-l border-gray-300 shrink-0">
+          <img src="/images/negocio.png" alt="Negocio" className='w-192 h-192' />
+        </aside>        
       </div>
       <Footer />
     </div>

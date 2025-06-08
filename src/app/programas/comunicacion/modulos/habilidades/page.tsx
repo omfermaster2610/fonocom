@@ -20,8 +20,8 @@ const Comunicacion = () => {
       </div>
       <section>
         <br></br>
-        <h1 className="text-xl font-extrabold">Descripción</h1>
-        <p className='text-sm  font-light'>Este programa cubre los conceptos fundamentales de la comunicación...</p>
+        <p className="font-semibold">Descripción</p>
+        <p>Este programa cubre los conceptos fundamentales de la comunicación...</p>
       </section>
       <br></br>
       <section className='space-y-1 w-fit flex'>
@@ -31,21 +31,13 @@ const Comunicacion = () => {
                 Las habilidades comunicativas son el conjunto de capacidades que permiten expresar y comprender mensajes de forma efectiva, tanto de manera oral como escrita, en diversos contextos.
             </p>
             <br/>
-            <p className="text-xl font-semibold">Objetivos:</p>
-            <p>
-                A continuación, encontrarás actividades orientadas al fortalecimiento de estas habilidades, fundamentales para mejorar la interacción personal, social y laboral.
-            </p>
         </div>
-          <aside className=" w-64 p-4 border-l border-gray-300 shrink-0">
-            <img src="/images/comunicacion.png" alt="Comunicación" className='w-192 h-192' />
-          </aside>
       </section>
-        <br></br>
-          <div className="flex p-4 gap-10">
+      <div className="p-4 gap-10">
             <p className="text-xl font-semibold">Contenido Programático</p>
-            <div className="mt-8 flex flex-col">       
+            <div className="mt-8">       
               <br/>
-              <div className="flex flex-row gap-6 max-w-full">
+              <div className="flex flex-row grid-cols-2 gap-6 max-w-full">
                 <Link href="/programas/comunicacion/modulos/habilidades/modulo1">
                   <button type="button" className="button">Modulo 1: Escucha activa</button>
                 </Link>
@@ -62,7 +54,11 @@ const Comunicacion = () => {
               <br />
             </div>
           </div>
+        <br></br>
         </div>
+          <aside className=" w-64 p-4 border-l border-gray-300 shrink-0">
+            <img src="/images/comunicacion.png" alt="Comunicación" className='w-192 h-192' />
+          </aside>
       </div>
       <Footer />
     </div>

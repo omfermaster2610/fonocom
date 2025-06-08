@@ -18,7 +18,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
     <>
       {/* Sidebar */}
       <div
-      className={`fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-20 ${
+      className={`flex flex-col fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-20 ${
         isOpen ? 'translate-x-0' : '-translate-x-full'
       }`}
       style={{
@@ -28,7 +28,7 @@ export default function Sidebar({ isOpen, onClose }: SidebarProps) {
       <div style={{
           marginTop: "2rem",
         }}>
-        <button onClick={onClose} className="text-lg justify-end mb-6 cursor-pointer hover:transform hover:scale-110">
+        <button onClick={onClose} className=" text-lg justify-end mb-6 cursor-pointer hover:transform hover:scale-110">
           <p className="text-2xl">X</p>
         </button>
         <ul className="space-y-4 cursor-pointer">

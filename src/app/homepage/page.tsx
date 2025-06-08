@@ -53,11 +53,13 @@ export default function HomePage() {
             {programs.map((program) => (
               <div
                 key={program.id}
-                className="border rounded-xl p-4 flex flex-col items-center text-center shadow hover:shadow-md transition max-w-sm mx-auto"
+                className="border rounded-xl p-4 flex flex-col items-center text-center shadow hover:shadow-md hover:scale-105 transition max-w-sm mx-auto"
               >
-                <div className="text-4xl mb-2">{program.icon}</div>
-                <h3 className="text-base font-semibold">{program.title}</h3>
-                <Link href={program.link}><button className="mt-3 text-sm font-underline cursor-pointer text-gray-800 border border-gray-500 px-3 py-1 rounded hover:bg-gray-200">
+                <div className="text-4xl mb-2 hover:scale-110 transition">{program.icon}</div>
+                <br/>
+                <p className="text-base font-semibold hover:scale-110 transition">{program.title}</p>
+                <br/>
+                <Link href={program.link}><button className="button mt-3 text-sm cursor-pointer text-gray-800">
                   Entrar
                 </button></Link>
                 <br></br>

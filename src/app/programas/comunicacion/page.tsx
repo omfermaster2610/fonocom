@@ -35,7 +35,7 @@ const Comunicacion = () => {
           <div className="flex p-4 gap-10">
             <p className="text-xl font-semibold">Módulos Programáticos:</p>
             <br></br>
-            <div className="mt-8 flex flex-col">       
+            <div className="mt-8">       
               <br />
               <Link href="/programas/comunicacion/modulos/habilidades">
                 <button type='button' className="button">

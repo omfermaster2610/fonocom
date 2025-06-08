@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 import Header from '../../../../header';
 import Link from 'next/link';
@@ -20,8 +19,8 @@ const Comunicacion = () => {
       </div>
       <section>
         <br></br>
-        <p className="text-xl font-extrabold">Descripción</p>
-        <p className='text-sm  font-light'>Este programa cubre los conceptos fundamentales de la comunicación...</p>
+        <p className="font-semibold">Descripción</p>
+        <p>Este programa cubre los conceptos fundamentales de la comunicación...</p>
       </section>
       <br></br>
       <section className='space-y-1 w-fit flex'>
@@ -31,15 +30,7 @@ const Comunicacion = () => {
                 Las competencias comunicativas es la capacidad para usar el lenguaje de manera adecuada según el contexto, integrando conocimientos lingüísticos, socioculturales y estratégicos con el fin de lograr una comunicación clara y efectiva.
             </p>
             <br/>
-            <br/>
-            <p className="text-xl font-semibold">Objetivos:</p>
-            <p>
-                A continuación, encontrarás actividades diseñadas para fortalecer nuestras competencias comunicativas y mejorar la forma en que nos relacionamos con los demás en distintos entornos.
-            </p>
         </div>
-          <aside className=" w-64 p-4 border-l border-gray-300 shrink-0">
-            <img src="/images/comunicacion.png" alt="Comunicación" className='w-192 h-192' />
-          </aside>
       </section>
         <br></br>
           <div className="flex p-4 gap-10">
@@ -64,6 +55,9 @@ const Comunicacion = () => {
             </div>
           </div>
         </div>
+        <aside className=" w-64 p-4 border-l border-gray-300 shrink-0">
+          <img src="/images/comunicacion.png" alt="Comunicación" className='w-192 h-192' />
+        </aside>
       </div>
       <Footer />
     </div>
