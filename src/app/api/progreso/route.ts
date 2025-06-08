@@ -53,17 +53,18 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
 
-    // Obtener progreso actual desde la tabla progreso
     const progresoActual: Progreso = await obtenerProgreso(usuario.id);
 
-    // Asegurarse de que exista el módulo y la actividad
-    if (!progresoActual[modulo]) {
-      progresoActual[modulo] = {};
+    // Asegurarse de que el módulo esté inicializado
+    const moduloKey = modulo as keyof Progreso;
+
+    if (!progresoActual[moduloKey]) {
+      progresoActual[moduloKey] = {};
     }
 
-    const progresoActividadActual = progresoActual[modulo][actividad] || 0;
+    const progresoActividadActual = progresoActual[moduloKey][actividad] ?? 0;
     const nuevoProgreso = Math.min(progresoActividadActual + incremento, 100);
-    progresoActual[modulo][actividad] = nuevoProgreso;
+    progresoActual[moduloKey][actividad] = nuevoProgreso;
 
     await actualizarProgreso(usuario.id, progresoActual);
 

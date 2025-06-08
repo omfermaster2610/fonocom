@@ -3,9 +3,9 @@ export interface ProgresoModulo {
 }
 
 export interface Progreso {
-  comunicacion: ProgresoModulo;
-  empleo: ProgresoModulo;
-  ideas: ProgresoModulo;
+  comunicacion: Record<string, number>;
+  empleo: Record<string, number>;
+  ideas: Record<string, number>;
 }
 
 export interface Usuario {
