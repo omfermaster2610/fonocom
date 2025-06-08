@@ -154,7 +154,6 @@ export default function Modulo1() {
             Se trabajan aspectos como el lenguaje claro y persuasivo, el contacto con el cliente, la atención al público, el uso de expresiones adecuadas y la confianza al momento de hablar. 
             A través de simulaciones, ejercicios prácticos y retroalimentación, los participantes aprenden a desenvolverse de forma efectiva en contextos de venta, aumentando las posibilidades de éxito comercial.
           </p>
-
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
               <strong>Error:</strong> {error}

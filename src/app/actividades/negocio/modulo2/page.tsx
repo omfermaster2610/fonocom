@@ -156,7 +156,6 @@ export default function Modulo1() {
             Se promueve el análisis del entorno, la identificación de necesidades del mercado y la definición de productos o servicios viables. 
             El objetivo es que cada persona pueda visualizar un proyecto realista y sostenible, que responda a sus capacidades y al contexto en el que se desenvuelve.
           </p>
-
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
               <strong>Error:</strong> {error}

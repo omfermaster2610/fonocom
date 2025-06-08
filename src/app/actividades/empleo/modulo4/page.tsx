@@ -156,7 +156,6 @@ export default function Modulo1() {
             Se abordan temas como el acompañamiento en la búsqueda de empleo, la preparación emocional, el seguimiento del desempeño laboral y la promoción de la autonomía. 
             Esta orientación busca fortalecer el vínculo entre el entorno familiar y el proceso de inserción, generando redes de apoyo que favorecen la sostenibilidad del empleo.
           </p>
-
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
               <strong>Error:</strong> {error}

@@ -153,7 +153,6 @@ export default function Modulo1() {
             A través de simulaciones y dinámicas interactivas, los usuarios aprenden a identificar y respetar los límites espaciales en diferentes contextos, lo que contribuye a una comunicación no invasiva y respetuosa. 
             Esta competencia favorece la integración social y mejora las relaciones interpersonales al promover conductas apropiadas en los distintos entornos.
           </p>
-
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
               <strong>Error:</strong> {error}

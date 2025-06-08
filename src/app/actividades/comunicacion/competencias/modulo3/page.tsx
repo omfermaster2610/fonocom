@@ -153,7 +153,6 @@ export default function Modulo1() {
             Los usuarios aprenden a interpretar intenciones comunicativas, seguir normas sociales del lenguaje y adaptar su discurso según la situación, el interlocutor o el propósito comunicativo. 
             Esta competencia es fundamental para resolver problemas, expresar necesidades, negociar y participar activamente en la vida social y laboral.
           </p>
-
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
               <strong>Error:</strong> {error}

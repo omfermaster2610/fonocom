@@ -153,7 +153,6 @@ export default function Modulo1() {
             Mediante ejercicios guiados, los usuarios trabajan aspectos como la pronunciación, el ritmo del habla y la entonación, adaptados a sus necesidades. 
             La práctica constante permite una comunicación más efectiva y segura, promoviendo la autonomía en interacciones cotidianas y fortaleciendo la expresión de ideas, sentimientos y opiniones.
           </p>
-
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
               <strong>Error:</strong> {error}

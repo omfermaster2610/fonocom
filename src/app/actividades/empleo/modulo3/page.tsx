@@ -156,7 +156,6 @@ export default function Modulo1() {
             Se practican habilidades como la expresión de ideas, la escucha activa, la solicitud de ayuda, el seguimiento de instrucciones y la participación en conversaciones laborales. 
             El objetivo es que los usuarios puedan desenvolverse con seguridad en entrevistas de trabajo, reuniones, llamadas telefónicas y otros contextos donde la comunicación es clave para el éxito profesional.
           </p>
-
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
               <strong>Error:</strong> {error}

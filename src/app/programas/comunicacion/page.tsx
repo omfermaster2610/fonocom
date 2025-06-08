@@ -20,8 +20,8 @@ const Comunicacion = () => {
       </div>
       <section>
         <br></br>
-        <h1 className="text-xl font-extrabold">Descripción</h1>
-        <p className='text-sm  font-light'>Este programa cubre los conceptos fundamentales de la comunicación...</p>
+        <p className="text-xl font-semibold">Descripción</p>
+        <p>Este programa cubre los conceptos fundamentales de la comunicación...</p>
       </section>
       <br></br>
       <h1>Introducción</h1>

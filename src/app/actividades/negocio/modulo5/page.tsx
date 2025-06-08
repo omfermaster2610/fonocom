@@ -153,7 +153,6 @@ export default function Modulo1() {
             Se abordan temas como la motivación, el acompañamiento en la gestión del negocio, el manejo emocional ante retos y la promoción de la autonomía. 
             Esta formación fortalece las redes de apoyo, asegurando un entorno positivo y colaborativo para el desarrollo de iniciativas emprendedoras sostenibles.
           </p>
-
           {error && (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
               <strong>Error:</strong> {error}
