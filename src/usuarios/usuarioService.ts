@@ -6,9 +6,9 @@ export interface usuario {
   username: string
   password: string
   progreso: {
-    comunicacion: number
-    empleo: number
-    ideas: number
+    [modulo: string]: {
+      [actividad: string]: number
+    }
   }
 }
 
@@ -20,19 +20,18 @@ export async function obtenerUsuario(username: string): Promise<Usuario | null> 
 
   // Obtener progreso separado
   const resProgreso = await db.query(
-    'SELECT comunicacion, empleo, ideas FROM progreso WHERE usuarioid = $1',
+    'SELECT progreso_json FROM progreso WHERE usuarioid = $1',
     [usuario.id]
   );
 
-  const progreso = (resProgreso.rows[0] as Progreso) || {
-    comunicacion: 0,
-    empleo: 0,
-    ideas: 0,
+  const progreso = resProgreso.rows[0]?.progreso_json || {
+    comunicacion: {},
+    empleo: {},
+    ideas: {},
   };
 
   return { ...usuario, progreso };
 }
-
 
 export async function guardarUsuario(usuario: Usuario): Promise<void> {
   const res = await db.query(
@@ -47,17 +46,13 @@ export async function guardarUsuario(usuario: Usuario): Promise<void> {
 
   // Insertar o actualizar progreso usando ON CONFLICT
   await db.query(
-    `INSERT INTO progreso (usuarioid, comunicacion, empleo, ideas)
-     VALUES ($1, $2, $3, $4)
-     ON CONFLICT (usuarioid) DO UPDATE SET
-       comunicacion = EXCLUDED.comunicacion,
-       empleo = EXCLUDED.empleo,
-       ideas = EXCLUDED.ideas`,
+    `INSERT INTO progreso (usuarioid, progreso_json)
+    VALUES ($1, $2)
+    ON CONFLICT (usuarioid) DO UPDATE SET
+      progreso_json = EXCLUDED.progreso_json`,
     [
       usuarioid,
-      usuario.progreso.comunicacion,
-      usuario.progreso.empleo,
-      usuario.progreso.ideas,
+      usuario.progreso
     ]
   );
 }
@@ -71,35 +66,25 @@ export async function registrarUsuario({ username, password }: { username: strin
   const nuevoUsuario = res.rows[0]
 
   await db.query(
-    `INSERT INTO progreso (usuarioid, comunicacion, empleo, ideas) VALUES ($1, 0, 0, 0)`,
+    `INSERT INTO progreso (usuarioid, progreso_json) VALUES ($1, '{}')`,
     [nuevoUsuario.id]
   )
 
   return nuevoUsuario
 }
 
-
-export async function obtenerProgreso(usuarioid: number): Promise<Progreso> {
-  const res = await db.query(
-    'SELECT comunicacion, empleo, ideas FROM progreso WHERE usuarioid = $1',
-    [usuarioid]
+export async function obtenerProgreso(usuarioId: number): Promise<any> {
+  const result = await db.query(
+    "SELECT progreso_json FROM progreso WHERE usuarioid = $1",
+    [usuarioId]
   );
-  return (res.rows[0] as Progreso) || {
-    comunicacion: 0,
-    empleo: 0,
-    ideas: 0,
-  };
+  return result.rows[0]?.progreso_json || {};
 }
 
-
-export async function actualizarProgreso(usuarioid: number, nuevoProgreso: Progreso): Promise<void> {
+export async function actualizarProgreso(usuarioId: number, nuevoProgreso: any): Promise<void> {
   await db.query(
-    `UPDATE progreso SET comunicacion = $1, empleo = $2, ideas = $3 WHERE usuarioid = $4`,
-    [
-      nuevoProgreso.comunicacion,
-      nuevoProgreso.empleo,
-      nuevoProgreso.ideas,
-      usuarioid,
-    ]
+    "UPDATE progreso SET progreso_json = $1 WHERE usuarioid = $2",
+    [nuevoProgreso, usuarioId]
   );
 }
+

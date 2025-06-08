@@ -179,14 +179,13 @@ async function POST(req) {
             });
         }
         const user = result.rows[0];
-        // Consulta su progreso por idusuario (no username)
-        const progresoRes = await __TURBOPACK__imported__module__$5b$project$5d2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].query(`SELECT comunicacion, empleo, ideas FROM progreso WHERE usuarioid = $1`, [
+        const progresoRes = await __TURBOPACK__imported__module__$5b$project$5d2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["default"].query(`SELECT progreso_json FROM progreso WHERE usuarioid = $1`, [
             user.id
         ]);
-        const progreso = progresoRes.rows[0] || {
-            comunicacion: 0,
-            empleo: 0,
-            ideas: 0
+        const progreso = progresoRes.rows[0]?.progreso_json || {
+            comunicacion: {},
+            empleo: {},
+            ideas: {}
         };
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
             user: {

@@ -162,13 +162,13 @@ async function obtenerUsuario(username) {
     if (resUsuario.rows.length === 0) return null;
     const usuario = resUsuario.rows[0];
     // Obtener progreso separado
-    const resProgreso = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].query('SELECT comunicacion, empleo, ideas FROM progreso WHERE usuarioid = $1', [
+    const resProgreso = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].query('SELECT progreso_json FROM progreso WHERE usuarioid = $1', [
         usuario.id
     ]);
-    const progreso = resProgreso.rows[0] || {
-        comunicacion: 0,
-        empleo: 0,
-        ideas: 0
+    const progreso = resProgreso.rows[0]?.progreso_json || {
+        comunicacion: {},
+        empleo: {},
+        ideas: {}
     };
     return {
         ...usuario,
@@ -185,16 +185,12 @@ async function guardarUsuario(usuario) {
     ]);
     const usuarioid = res.rows[0].id;
     // Insertar o actualizar progreso usando ON CONFLICT
-    await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].query(`INSERT INTO progreso (usuarioid, comunicacion, empleo, ideas)
-     VALUES ($1, $2, $3, $4)
-     ON CONFLICT (usuarioid) DO UPDATE SET
-       comunicacion = EXCLUDED.comunicacion,
-       empleo = EXCLUDED.empleo,
-       ideas = EXCLUDED.ideas`, [
+    await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].query(`INSERT INTO progreso (usuarioid, progreso_json)
+    VALUES ($1, $2)
+    ON CONFLICT (usuarioid) DO UPDATE SET
+      progreso_json = EXCLUDED.progreso_json`, [
         usuarioid,
-        usuario.progreso.comunicacion,
-        usuario.progreso.empleo,
-        usuario.progreso.ideas
+        usuario.progreso
     ]);
 }
 async function registrarUsuario({ username, password }) {
@@ -203,27 +199,21 @@ async function registrarUsuario({ username, password }) {
         password
     ]);
     const nuevoUsuario = res.rows[0];
-    await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].query(`INSERT INTO progreso (usuarioid, comunicacion, empleo, ideas) VALUES ($1, 0, 0, 0)`, [
+    await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].query(`INSERT INTO progreso (usuarioid, progreso_json) VALUES ($1, '{}')`, [
         nuevoUsuario.id
     ]);
     return nuevoUsuario;
 }
-async function obtenerProgreso(usuarioid) {
-    const res = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].query('SELECT comunicacion, empleo, ideas FROM progreso WHERE usuarioid = $1', [
-        usuarioid
+async function obtenerProgreso(usuarioId) {
+    const result = await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].query("SELECT progreso_json FROM progreso WHERE usuarioid = $1", [
+        usuarioId
     ]);
-    return res.rows[0] || {
-        comunicacion: 0,
-        empleo: 0,
-        ideas: 0
-    };
+    return result.rows[0]?.progreso_json || {};
 }
-async function actualizarProgreso(usuarioid, nuevoProgreso) {
-    await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].query(`UPDATE progreso SET comunicacion = $1, empleo = $2, ideas = $3 WHERE usuarioid = $4`, [
-        nuevoProgreso.comunicacion,
-        nuevoProgreso.empleo,
-        nuevoProgreso.ideas,
-        usuarioid
+async function actualizarProgreso(usuarioId, nuevoProgreso) {
+    await __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$lib$2f$db$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["db"].query("UPDATE progreso SET progreso_json = $1 WHERE usuarioid = $2", [
+        nuevoProgreso,
+        usuarioId
     ]);
 }
 __turbopack_async_result__();
@@ -281,10 +271,10 @@ async function GET(request) {
 async function POST(request) {
     try {
         const body = await request.json();
-        const { username, modulo, incremento } = body;
-        if (!username || !modulo || incremento === undefined) {
+        const { username, modulo, actividad, incremento } = body;
+        if (!username || !modulo || !actividad || incremento === undefined) {
             return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
-                error: "Username, modulo, and incremento are required"
+                error: "Username, modulo, actividad, and incremento are required"
             }, {
                 status: 400
             });
@@ -311,14 +301,19 @@ async function POST(request) {
         }
         // Obtener progreso actual desde la tabla progreso
         const progresoActual = await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$usuarios$2f$usuarioService$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["obtenerProgreso"])(usuario.id);
-        const progresoModuloActual = progresoActual[modulo] || 0;
-        const nuevoProgreso = Math.min(progresoModuloActual + incremento, 100);
-        progresoActual[modulo] = nuevoProgreso;
+        // Asegurarse de que exista el módulo y la actividad
+        if (!progresoActual[modulo]) {
+            progresoActual[modulo] = {};
+        }
+        const progresoActividadActual = progresoActual[modulo][actividad] || 0;
+        const nuevoProgreso = Math.min(progresoActividadActual + incremento, 100);
+        progresoActual[modulo][actividad] = nuevoProgreso;
         await (0, __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$usuarios$2f$usuarioService$2e$ts__$5b$app$2d$route$5d$__$28$ecmascript$29$__["actualizarProgreso"])(usuario.id, progresoActual);
         return __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$server$2e$js__$5b$app$2d$route$5d$__$28$ecmascript$29$__["NextResponse"].json({
             username,
             modulo,
-            progresoAnterior: progresoModuloActual,
+            actividad,
+            progresoAnterior: progresoActividadActual,
             progresoNuevo: nuevoProgreso,
             completado: nuevoProgreso >= 1
         });

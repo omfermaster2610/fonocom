@@ -23,16 +23,15 @@ export async function POST(req: Request) {
 
     const user = result.rows[0]
 
-    // Consulta su progreso por idusuario (no username)
     const progresoRes = await db.query(
-  `SELECT comunicacion, empleo, ideas FROM progreso WHERE usuarioid = $1`,
-  [user.id]
-)
+      `SELECT progreso_json FROM progreso WHERE usuarioid = $1`,
+      [user.id]
+    )
 
-    const progreso = progresoRes.rows[0] || {
-      comunicacion: 0,
-      empleo: 0,
-      ideas: 0,
+    const progreso = progresoRes.rows[0]?.progreso_json || {
+      comunicacion: {},
+      empleo: {},
+      ideas: {},
     }
 
     return NextResponse.json({

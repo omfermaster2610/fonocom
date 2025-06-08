@@ -1,12 +1,16 @@
+export interface ProgresoModulo {
+  [actividad: string]: number;
+}
+
 export interface Progreso {
-  comunicacion: number;
-  empleo: number;
-  ideas: number;
+  comunicacion: ProgresoModulo;
+  empleo: ProgresoModulo;
+  ideas: ProgresoModulo;
 }
 
 export interface Usuario {
-  id: number
-  username: string
-  password: string
-  progreso: Progreso
+  id: number;
+  username: string;
+  password: string;
+  progreso: Progreso;
 }

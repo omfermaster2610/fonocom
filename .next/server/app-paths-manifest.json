@@ -1,13 +1,14 @@
 {
+  "/actividades/comunicacion/competencias/modulo1/page": "app/actividades/comunicacion/competencias/modulo1/page.js",
   "/actividades/comunicacion/habilidades/modulo1/page": "app/actividades/comunicacion/habilidades/modulo1/page.js",
   "/actividades/page": "app/actividades/page.js",
   "/api/login/route": "app/api/login/route.js",
   "/api/progreso/route": "app/api/progreso/route.js",
-  "/api/usuario/registro/route": "app/api/usuario/registro/route.js",
+  "/api/usuario/actualizar/route": "app/api/usuario/actualizar/route.js",
   "/api/usuario/route": "app/api/usuario/route.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
   "/homepage/page": "app/homepage/page.js",
   "/login/page": "app/login/page.js",
-  "/registro/page": "app/registro/page.js",
+  "/page": "app/page.js",
   "/usuario/page": "app/usuario/page.js"
 }

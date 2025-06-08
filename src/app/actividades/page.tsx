@@ -157,7 +157,7 @@ export default function HomePage() {
 
       <div className="max-w-screen-xl mx-auto px-6 py-8 justify-center"
       style={{
-          padding: "0 1.5rem !important",
+          padding: "0 1.5rem",
           marginTop: "2rem"
         }}>
         <main className="bg-white rounded-md p-8 text-gray-800">

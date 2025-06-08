@@ -95,6 +95,7 @@ export default function Modulo1() {
         body: JSON.stringify({
           username,
           modulo: "comunicacion",
+          actividad: "actividad3",
           incremento: 12.5,
         }),
       })

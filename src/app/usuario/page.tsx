@@ -5,17 +5,17 @@ import Header from '../header'
 import Footer from '../footer'
 import { useRouter } from 'next/navigation'
 
-
 interface Usuario {
   id: number
   username: string
   password: string
   progreso: {
-    comunicacion: number
-    empleo: number
-    ideas: number
+    comunicacion: Record<string, number>
+    empleo: Record<string, number>
+    ideas: Record<string, number>
   }
 }
+
 export default function UsuarioPage() {
   const [usuario, setUsuario] = useState<Usuario | null>(null)
   const [form, setForm] = useState({ username: '', password: '' })
@@ -50,6 +50,14 @@ export default function UsuarioPage() {
         setUsuario(null);
       });
   }, [])
+
+  const calcularProgreso = (area: Record<string, number>) => {
+    const valores = Object.values(area);
+    if (valores.length === 0) return 0;
+    const suma = valores.reduce((a, b) => a + b, 0);
+    const promedio = suma / valores.length;
+    return Math.round(promedio); // O ajusta como necesites
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -97,9 +105,9 @@ export default function UsuarioPage() {
         <br/>        
         {usuario ? (
           <div className="space-y-2">
-            <p>Progreso en Comunicación: {usuario.progreso.comunicacion}%</p>
-            <p>Progreso en Empleo: {usuario.progreso.empleo}%</p>
-            <p>Progreso en Ideas: {usuario.progreso.ideas}%</p>
+            <p>Progreso en Comunicación: {calcularProgreso(usuario.progreso?.comunicacion || {})}%</p>
+            <p>Progreso en Empleo: {calcularProgreso(usuario.progreso?.empleo || {})}%</p>
+            <p>Progreso en Ideas: {calcularProgreso(usuario.progreso?.ideas || {})}%</p>
           </div>
         ) : (
           <p>Cargando progreso...</p>

@@ -70,7 +70,7 @@ export default function Modulo1() {
         return
       }
 
-      const data: ProgresoResponse = await response.json()
+    const data: ProgresoResponse = await response.json()
       setCompletado(data.progreso.comunicacion >= 1)
       setError(null)
     } catch (err) {
@@ -96,6 +96,7 @@ export default function Modulo1() {
         body: JSON.stringify({
           username,
           modulo: "comunicacion",
+          actividad: "actividad1",
           incremento: 12.5,
         }),
       })

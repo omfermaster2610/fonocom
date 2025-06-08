@@ -16,7 +16,7 @@ export async function GET(request: NextRequest) {
     if (!usuario) {
       return NextResponse.json({ error: "User not found" }, { status: 404 });
     }
-    
+
     const progreso: Progreso = await obtenerProgreso(usuario.id);
 
     return NextResponse.json({
@@ -32,11 +32,11 @@ export async function GET(request: NextRequest) {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { username, modulo, incremento } = body;
+    const { username, modulo, actividad, incremento } = body;
 
-    if (!username || !modulo || incremento === undefined) {
+    if (!username || !modulo || !actividad || incremento === undefined) {
       return NextResponse.json(
-        { error: "Username, modulo, and incremento are required" },
+        { error: "Username, modulo, actividad, and incremento are required" },
         { status: 400 }
       );
     }
@@ -56,16 +56,22 @@ export async function POST(request: NextRequest) {
     // Obtener progreso actual desde la tabla progreso
     const progresoActual: Progreso = await obtenerProgreso(usuario.id);
 
-    const progresoModuloActual = progresoActual[modulo as Modulo] || 0;
-    const nuevoProgreso = Math.min(progresoModuloActual + incremento, 100);
-    progresoActual[modulo as Modulo] = nuevoProgreso;
+    // Asegurarse de que exista el módulo y la actividad
+    if (!progresoActual[modulo]) {
+      progresoActual[modulo] = {};
+    }
+
+    const progresoActividadActual = progresoActual[modulo][actividad] || 0;
+    const nuevoProgreso = Math.min(progresoActividadActual + incremento, 100);
+    progresoActual[modulo][actividad] = nuevoProgreso;
 
     await actualizarProgreso(usuario.id, progresoActual);
 
     return NextResponse.json({
       username,
       modulo,
-      progresoAnterior: progresoModuloActual,
+      actividad,
+      progresoAnterior: progresoActividadActual,
       progresoNuevo: nuevoProgreso,
       completado: nuevoProgreso >= 1,
     });

@@ -455,6 +455,13 @@ function UsuarioPage() {
             }["UsuarioPage.useEffect"]);
         }
     }["UsuarioPage.useEffect"], []);
+    const calcularProgreso = (area)=>{
+        const valores = Object.values(area);
+        if (valores.length === 0) return 0;
+        const suma = valores.reduce((a, b)=>a + b, 0);
+        const promedio = suma / valores.length;
+        return Math.round(promedio); // O ajusta como necesites
+    };
     const handleSubmit = async (e)=>{
         e.preventDefault();
         setLoading(true);
@@ -489,7 +496,7 @@ function UsuarioPage() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/usuario/page.tsx",
-                lineNumber: 85,
+                lineNumber: 93,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -500,7 +507,7 @@ function UsuarioPage() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                         fileName: "[project]/src/app/usuario/page.tsx",
-                        lineNumber: 90,
+                        lineNumber: 98,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -508,7 +515,7 @@ function UsuarioPage() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                lineNumber: 92,
+                                lineNumber: 100,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -521,12 +528,12 @@ function UsuarioPage() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/usuario/page.tsx",
-                                        lineNumber: 94,
+                                        lineNumber: 102,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                         fileName: "[project]/src/app/usuario/page.tsx",
-                                        lineNumber: 97,
+                                        lineNumber: 105,
                                         columnNumber: 9
                                     }, this),
                                     usuario ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -535,57 +542,57 @@ function UsuarioPage() {
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 children: [
                                                     "Progreso en Comunicación: ",
-                                                    usuario.progreso.comunicacion,
+                                                    calcularProgreso(usuario.progreso?.comunicacion || {}),
                                                     "%"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                                lineNumber: 100,
+                                                lineNumber: 108,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 children: [
                                                     "Progreso en Empleo: ",
-                                                    usuario.progreso.empleo,
+                                                    calcularProgreso(usuario.progreso?.empleo || {}),
                                                     "%"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                                lineNumber: 101,
+                                                lineNumber: 109,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                                 children: [
                                                     "Progreso en Ideas: ",
-                                                    usuario.progreso.ideas,
+                                                    calcularProgreso(usuario.progreso?.ideas || {}),
                                                     "%"
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                                lineNumber: 102,
+                                                lineNumber: 110,
                                                 columnNumber: 13
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/usuario/page.tsx",
-                                        lineNumber: 99,
+                                        lineNumber: 107,
                                         columnNumber: 11
                                     }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                         children: "Cargando progreso..."
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/usuario/page.tsx",
-                                        lineNumber: 105,
+                                        lineNumber: 113,
                                         columnNumber: 11
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                lineNumber: 93,
+                                lineNumber: 101,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                lineNumber: 108,
+                                lineNumber: 116,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -595,7 +602,7 @@ function UsuarioPage() {
                                         children: "Modificar usuario"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/usuario/page.tsx",
-                                        lineNumber: 110,
+                                        lineNumber: 118,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("form", {
@@ -610,7 +617,7 @@ function UsuarioPage() {
                                                         children: "Usuario:"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/usuario/page.tsx",
-                                                        lineNumber: 113,
+                                                        lineNumber: 121,
                                                         columnNumber: 13
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -624,18 +631,18 @@ function UsuarioPage() {
                                                         className: "border border-black px-2 py-1"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/usuario/page.tsx",
-                                                        lineNumber: 116,
+                                                        lineNumber: 124,
                                                         columnNumber: 13
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                                lineNumber: 112,
+                                                lineNumber: 120,
                                                 columnNumber: 11
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                                lineNumber: 124,
+                                                lineNumber: 132,
                                                 columnNumber: 13
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -646,7 +653,7 @@ function UsuarioPage() {
                                                         children: "Contraseña:"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/usuario/page.tsx",
-                                                        lineNumber: 126,
+                                                        lineNumber: 134,
                                                         columnNumber: 13
                                                     }, this),
                                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("input", {
@@ -660,18 +667,18 @@ function UsuarioPage() {
                                                         className: "border border-black px-2 py-1"
                                                     }, void 0, false, {
                                                         fileName: "[project]/src/app/usuario/page.tsx",
-                                                        lineNumber: 129,
+                                                        lineNumber: 137,
                                                         columnNumber: 13
                                                     }, this)
                                                 ]
                                             }, void 0, true, {
                                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                                lineNumber: 125,
+                                                lineNumber: 133,
                                                 columnNumber: 11
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                                lineNumber: 137,
+                                                lineNumber: 145,
                                                 columnNumber: 11
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -681,19 +688,19 @@ function UsuarioPage() {
                                                 children: loading ? "Guardando..." : "Guardar"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                                lineNumber: 138,
+                                                lineNumber: 146,
                                                 columnNumber: 11
                                             }, this)
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/app/usuario/page.tsx",
-                                        lineNumber: 111,
+                                        lineNumber: 119,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                lineNumber: 109,
+                                lineNumber: 117,
                                 columnNumber: 9
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -702,13 +709,13 @@ function UsuarioPage() {
                                 children: "Cerrar sesión"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/usuario/page.tsx",
-                                lineNumber: 147,
+                                lineNumber: 155,
                                 columnNumber: 9
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/usuario/page.tsx",
-                        lineNumber: 91,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("aside", {
@@ -719,23 +726,23 @@ function UsuarioPage() {
                             className: "w-192 h-192"
                         }, void 0, false, {
                             fileName: "[project]/src/app/usuario/page.tsx",
-                            lineNumber: 152,
+                            lineNumber: 160,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/app/usuario/page.tsx",
-                        lineNumber: 151,
+                        lineNumber: 159,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/usuario/page.tsx",
-                lineNumber: 86,
+                lineNumber: 94,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/usuario/page.tsx",
-                lineNumber: 155,
+                lineNumber: 163,
                 columnNumber: 7
             }, this)
         ]
