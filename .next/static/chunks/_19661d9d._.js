@@ -24,7 +24,7 @@ function Sidebar({ isOpen, onClose }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-20 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`,
+                className: `flex flex-col fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-20 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`,
                 style: {
                     padding: "0 1.5rem"
                 },
@@ -36,7 +36,7 @@ function Sidebar({ isOpen, onClose }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: onClose,
-                                className: "text-lg justify-end mb-6 cursor-pointer hover:transform hover:scale-110",
+                                className: " text-lg justify-end mb-6 cursor-pointer hover:transform hover:scale-110",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-2xl",
                                     children: "X"
@@ -611,7 +611,7 @@ function Modulo1() {
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-sm font-light leading-relaxed",
-                                children: "La escucha activa es una habilidad fundamental en la comunicación efectiva. Implica prestar atención completa al hablante, comprender su mensaje, y responder de manera apropiada. Esta actividad te ayudará a desarrollar esta importante competencia."
+                                children: "Esta actividad está orientada a fortalecer la capacidad de atención auditiva y comprensión de mensajes orales. A través de ejercicios interactivos, los usuarios aprenden a identificar ideas principales, reconocer emociones en la voz y responder de manera adecuada a lo que escuchan. La escucha activa no solo mejora la comunicación, sino que también fomenta el respeto, la empatía y la participación efectiva en entornos sociales y laborales."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/actividades/comunicacion/habilidades/modulo1/page.tsx",
                                 lineNumber: 151,

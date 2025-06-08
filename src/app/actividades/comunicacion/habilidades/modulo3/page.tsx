@@ -149,9 +149,9 @@ export default function Modulo1() {
           <br />
           <h3 className="text-xl font-extrabold">Descripción</h3>
           <p className="text-sm font-light leading-relaxed">
-            La escucha activa es una habilidad fundamental en la comunicación efectiva. Implica prestar atención
-            completa al hablante, comprender su mensaje, y responder de manera apropiada. Esta actividad te ayudará a
-            desarrollar esta importante competencia.
+            En este espacio se promueve el desarrollo de competencias básicas de lectura y escritura, esenciales para la vida diaria y la inserción laboral. 
+            Se trabajan aspectos como la comprensión lectora, la escritura funcional (llenado de formularios, redacción de mensajes, etc.) y el reconocimiento de palabras clave. 
+            Estas actividades se adaptan al nivel de cada usuario, facilitando el aprendizaje significativo y fomentando la independencia.
           </p>
 
           {error && (

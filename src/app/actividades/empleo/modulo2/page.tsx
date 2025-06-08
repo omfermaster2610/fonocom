@@ -149,9 +149,9 @@ export default function Modulo1() {
           <br />
           <h3 className="text-xl font-extrabold">Descripción</h3>
           <p className="text-sm font-light leading-relaxed">
-            La escucha activa es una habilidad fundamental en la comunicación efectiva. Implica prestar atención
-            completa al hablante, comprender su mensaje, y responder de manera apropiada. Esta actividad te ayudará a
-            desarrollar esta importante competencia.
+            En esta actividad se fortalece un conjunto de habilidades fundamentales para el desempeño adecuado en entornos de trabajo. 
+            Se abordan temas como la presentación personal, la interacción con compañeros y superiores, la gestión del tiempo, el seguimiento de normas laborales y la resolución de conflictos. 
+            A través de ejercicios vivenciales, simulaciones y juegos de roles, los usuarios adquieren herramientas prácticas que aumentan su empleabilidad y su autonomía en el entorno laboral.
           </p>
 
           {error && (

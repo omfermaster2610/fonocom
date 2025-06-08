@@ -140,7 +140,10 @@ export default function Modulo1() {
   return (
     <div className="p-6 space-y-6">
       <Header />
-      <div className="px-6 space-y-6">
+      <div className="p-6 space-y-6"
+          style={{
+            padding: "0 1.5rem",
+            }}>
         <br />
         <h1 className="text-2xl font-bold">🔬 Empleo y trabajo</h1>
         <h2 className="text-2xl font-bold">Actividad 1: Evaluación de habilidades laborales</h2>
@@ -149,9 +152,9 @@ export default function Modulo1() {
           <br />
           <h3 className="text-xl font-extrabold">Descripción</h3>
           <p className="text-sm font-light leading-relaxed">
-            La escucha activa es una habilidad fundamental en la comunicación efectiva. Implica prestar atención
-            completa al hablante, comprender su mensaje, y responder de manera apropiada. Esta actividad te ayudará a
-            desarrollar esta importante competencia.
+            Esta actividad tiene como objetivo identificar las competencias, intereses y áreas de mejora de cada usuario en relación con el mundo laboral. 
+            A través de herramientas diagnósticas, entrevistas y actividades prácticas, se evalúan aspectos como la responsabilidad, la puntualidad, el trabajo en equipo, la comprensión de instrucciones y la capacidad para resolver problemas. 
+            Los resultados permiten diseñar planes de intervención personalizados que potencien las oportunidades de inserción laboral de cada participante.
           </p>
 
           {error && (

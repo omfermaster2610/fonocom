@@ -149,7 +149,9 @@ export default function Modulo1() {
           <br />
           <h3 className="text-xl font-extrabold">Descripción</h3>
           <p className="text-sm font-light leading-relaxed">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, explicabo temporibus debitis nihil at rerum vero in, recusandae animi ad modi. Ex inventore voluptatum quasi! Quo odit enim dolorem labore?
+            Aquí se desarrollan habilidades para usar el lenguaje de forma funcional y adaptada a distintos contextos. 
+            Los usuarios aprenden a interpretar intenciones comunicativas, seguir normas sociales del lenguaje y adaptar su discurso según la situación, el interlocutor o el propósito comunicativo. 
+            Esta competencia es fundamental para resolver problemas, expresar necesidades, negociar y participar activamente en la vida social y laboral.
           </p>
 
           {error && (

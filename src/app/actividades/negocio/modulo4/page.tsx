@@ -150,9 +150,9 @@ export default function Modulo1() {
           <br />
           <h3 className="text-xl font-extrabold">Descripción</h3>
           <p className="text-sm font-light leading-relaxed">
-            La escucha activa es una habilidad fundamental en la comunicación efectiva. Implica prestar atención
-            completa al hablante, comprender su mensaje, y responder de manera apropiada. Esta actividad te ayudará a
-            desarrollar esta importante competencia.
+            Esta actividad busca fortalecer las habilidades comunicativas necesarias para presentar y promocionar productos o servicios. 
+            Se trabajan aspectos como el lenguaje claro y persuasivo, el contacto con el cliente, la atención al público, el uso de expresiones adecuadas y la confianza al momento de hablar. 
+            A través de simulaciones, ejercicios prácticos y retroalimentación, los participantes aprenden a desenvolverse de forma efectiva en contextos de venta, aumentando las posibilidades de éxito comercial.
           </p>
 
           {error && (

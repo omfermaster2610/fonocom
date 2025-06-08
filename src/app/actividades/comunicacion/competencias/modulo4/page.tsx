@@ -135,23 +135,23 @@ export default function Modulo1() {
   }
 
   return (
-    <div className="p-6 space-y-6"
-      style={{
-        padding: "0 1.5rem",
-        }}>
-      <Header />
+     <div className="px-6 space-y-6">    
+          <Header />
+          <div className="p-6 space-y-6"
+          style={{
+            padding: "0 1.5rem",
+            }}>
       <div className="px-6 space-y-6">
         <br />
         <h1 className="text-2xl font-bold">📚 Comunicación: Competencias</h1>
         <h2 className="text-2xl font-bold">Actividad 4: Competencia proxémica</h2>
-
         <section className="space-y-4">
           <br />
           <h3 className="text-xl font-extrabold">Descripción</h3>
           <p className="text-sm font-light leading-relaxed">
-            La escucha activa es una habilidad fundamental en la comunicación efectiva. Implica prestar atención
-            completa al hablante, comprender su mensaje, y responder de manera apropiada. Esta actividad te ayudará a
-            desarrollar esta importante competencia.
+            Esta actividad se centra en el uso adecuado del espacio personal y la distancia física durante la comunicación. 
+            A través de simulaciones y dinámicas interactivas, los usuarios aprenden a identificar y respetar los límites espaciales en diferentes contextos, lo que contribuye a una comunicación no invasiva y respetuosa. 
+            Esta competencia favorece la integración social y mejora las relaciones interpersonales al promover conductas apropiadas en los distintos entornos.
           </p>
 
           {error && (
@@ -191,6 +191,7 @@ export default function Modulo1() {
         </section>
       </div>
       <Footer />
+    </div>
     </div>
   )
 }

@@ -149,9 +149,9 @@ export default function Modulo1() {
           <br />
           <h3 className="text-xl font-extrabold">Descripción</h3>
           <p className="text-sm font-light leading-relaxed">
-            La escucha activa es una habilidad fundamental en la comunicación efectiva. Implica prestar atención
-            completa al hablante, comprender su mensaje, y responder de manera apropiada. Esta actividad te ayudará a
-            desarrollar esta importante competencia.
+            Reconociendo el papel fundamental de las familias y cuidadores, esta actividad ofrece orientación sobre cómo apoyar los procesos de emprendimiento de los usuarios. 
+            Se abordan temas como la motivación, el acompañamiento en la gestión del negocio, el manejo emocional ante retos y la promoción de la autonomía. 
+            Esta formación fortalece las redes de apoyo, asegurando un entorno positivo y colaborativo para el desarrollo de iniciativas emprendedoras sostenibles.
           </p>
 
           {error && (

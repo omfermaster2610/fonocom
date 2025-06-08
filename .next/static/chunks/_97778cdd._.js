@@ -24,7 +24,7 @@ function Sidebar({ isOpen, onClose }) {
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                className: `fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-20 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`,
+                className: `flex flex-col fixed top-0 left-0 h-full w-64 bg-white shadow-lg transform transition-transform duration-300 z-20 ${isOpen ? 'translate-x-0' : '-translate-x-full'}`,
                 style: {
                     padding: "0 1.5rem"
                 },
@@ -36,7 +36,7 @@ function Sidebar({ isOpen, onClose }) {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
                                 onClick: onClose,
-                                className: "text-lg justify-end mb-6 cursor-pointer hover:transform hover:scale-110",
+                                className: " text-lg justify-end mb-6 cursor-pointer hover:transform hover:scale-110",
                                 children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                     className: "text-2xl",
                                     children: "X"
@@ -248,21 +248,20 @@ function HomePage() {
     const [usuario, setUsuario] = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useState"])(null);
     (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useEffect"])({
         "HomePage.useEffect": ()=>{
-            const saved = localStorage.getItem('user');
-            console.log("Usuario guardado:", saved);
-            if (!saved) return;
-            const { username } = JSON.parse(saved);
-            console.log("Buscando usuario:", username);
-            fetch(`/api/usuario?username=${username}`).then({
-                "HomePage.useEffect": (res)=>res.json()
-            }["HomePage.useEffect"]).then({
-                "HomePage.useEffect": (data)=>{
-                    console.log("Usuario encontrado:", data);
+            async function fetchUsuario() {
+                const saved = localStorage.getItem('user');
+                if (!saved) return;
+                const { username } = JSON.parse(saved);
+                try {
+                    const res = await fetch(`/api/usuario?username=${username}`);
+                    if (!res.ok) throw new Error('Error al obtener usuario');
+                    const data = await res.json();
                     setUsuario(data);
+                } catch (error) {
+                    console.error(error);
                 }
-            }["HomePage.useEffect"]).catch({
-                "HomePage.useEffect": (err)=>console.error("Error al obtener usuario:", err)
-            }["HomePage.useEffect"]);
+            }
+            fetchUsuario();
         }
     }["HomePage.useEffect"], []);
     return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["Fragment"], {
@@ -283,13 +282,6 @@ function HomePage() {
                                     className: "w-6 h-0.5 bg-black"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/header.tsx",
-                                    lineNumber: 39,
-                                    columnNumber: 11
-                                }, this),
-                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
-                                    className: "w-6 h-0.5 bg-black"
-                                }, void 0, false, {
-                                    fileName: "[project]/src/app/header.tsx",
                                     lineNumber: 40,
                                     columnNumber: 11
                                 }, this),
@@ -299,11 +291,18 @@ function HomePage() {
                                     fileName: "[project]/src/app/header.tsx",
                                     lineNumber: 41,
                                     columnNumber: 11
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                    className: "w-6 h-0.5 bg-black"
+                                }, void 0, false, {
+                                    fileName: "[project]/src/app/header.tsx",
+                                    lineNumber: 42,
+                                    columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/header.tsx",
-                            lineNumber: 38,
+                            lineNumber: 39,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -314,18 +313,18 @@ function HomePage() {
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/header.tsx",
-                            lineNumber: 44,
+                            lineNumber: 45,
                             columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/header.tsx",
-                    lineNumber: 32,
+                    lineNumber: 33,
                     columnNumber: 7
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/app/header.tsx",
-                lineNumber: 31,
+                lineNumber: 32,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$sidebar$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -333,7 +332,7 @@ function HomePage() {
                 onClose: ()=>setIsOpen(false)
             }, void 0, false, {
                 fileName: "[project]/src/app/header.tsx",
-                lineNumber: 50,
+                lineNumber: 51,
                 columnNumber: 7
             }, this)
         ]
@@ -487,6 +486,7 @@ function Modulo1() {
                 body: JSON.stringify({
                     username,
                     modulo: "ideas",
+                    actividad: "actividad1",
                     incremento: 20
                 })
             });
@@ -512,7 +512,7 @@ function Modulo1() {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                    lineNumber: 124,
+                    lineNumber: 125,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -527,7 +527,7 @@ function Modulo1() {
                                 className: "animate-spin rounded-full h-8 w-8 border-b-2 border-lime-500"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                lineNumber: 130,
+                                lineNumber: 131,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -535,29 +535,29 @@ function Modulo1() {
                                 children: "Cargando progreso..."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                lineNumber: 131,
+                                lineNumber: 132,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                        lineNumber: 129,
+                        lineNumber: 130,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                    lineNumber: 125,
+                    lineNumber: 126,
                     columnNumber: 9
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                    lineNumber: 134,
+                    lineNumber: 135,
                     columnNumber: 9
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-            lineNumber: 123,
+            lineNumber: 124,
             columnNumber: 7
         }, this);
     }
@@ -566,7 +566,7 @@ function Modulo1() {
         children: [
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$header$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                lineNumber: 141,
+                lineNumber: 142,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -577,7 +577,7 @@ function Modulo1() {
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                         fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                        lineNumber: 146,
+                        lineNumber: 147,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -585,7 +585,7 @@ function Modulo1() {
                         children: "🏛️ Ideas de negocio"
                     }, void 0, false, {
                         fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                        lineNumber: 147,
+                        lineNumber: 148,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
@@ -593,7 +593,7 @@ function Modulo1() {
                         children: "Actividad 1: Capacitación en habilidades emprendedoras"
                     }, void 0, false, {
                         fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                        lineNumber: 148,
+                        lineNumber: 149,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -601,7 +601,7 @@ function Modulo1() {
                         children: [
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                lineNumber: 151,
+                                lineNumber: 152,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -609,15 +609,15 @@ function Modulo1() {
                                 children: "Descripción"
                             }, void 0, false, {
                                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                lineNumber: 152,
+                                lineNumber: 153,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
                                 className: "text-sm font-light leading-relaxed",
-                                children: "La escucha activa es una habilidad fundamental en la comunicación efectiva. Implica prestar atención completa al hablante, comprender su mensaje, y responder de manera apropiada. Esta actividad te ayudará a desarrollar esta importante competencia."
+                                children: "Esta actividad tiene como fin involucrar a las familias y cuidadores en el proceso de inclusión laboral, brindándoles orientación y estrategias para apoyar activamente a los usuarios. Se abordan temas como el acompañamiento en la búsqueda de empleo, la preparación emocional, el seguimiento del desempeño laboral y la promoción de la autonomía. Esta orientación busca fortalecer el vínculo entre el entorno familiar y el proceso de inserción, generando redes de apoyo que favorecen la sostenibilidad del empleo."
                             }, void 0, false, {
                                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                lineNumber: 153,
+                                lineNumber: 154,
                                 columnNumber: 11
                             }, this),
                             error && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -627,7 +627,7 @@ function Modulo1() {
                                         children: "Error:"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                        lineNumber: 161,
+                                        lineNumber: 162,
                                         columnNumber: 15
                                     }, this),
                                     " ",
@@ -638,18 +638,18 @@ function Modulo1() {
                                         children: "Reintentar"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                        lineNumber: 162,
+                                        lineNumber: 163,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                lineNumber: 160,
+                                lineNumber: 161,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("br", {}, void 0, false, {
                                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                lineNumber: 168,
+                                lineNumber: 169,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -661,14 +661,14 @@ function Modulo1() {
                                         className: "animate-spin rounded-full h-4 w-4 border-b-2 border-white"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                        lineNumber: 182,
+                                        lineNumber: 183,
                                         columnNumber: 26
                                     }, this),
                                     completado ? "✅ Actividad Completada" : updating ? "Guardando..." : "🚀 Comenzar Actividad"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                lineNumber: 169,
+                                lineNumber: 170,
                                 columnNumber: 11
                             }, this),
                             completado && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -678,14 +678,14 @@ function Modulo1() {
                                         children: "¡Excelente!"
                                     }, void 0, false, {
                                         fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                        lineNumber: 188,
+                                        lineNumber: 189,
                                         columnNumber: 15
                                     }, this),
                                     " Has completado esta actividad exitosamente."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                lineNumber: 187,
+                                lineNumber: 188,
                                 columnNumber: 13
                             }, this),
                             username && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -696,30 +696,30 @@ function Modulo1() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                                lineNumber: 192,
+                                lineNumber: 193,
                                 columnNumber: 24
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                        lineNumber: 150,
+                        lineNumber: 151,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                lineNumber: 142,
+                lineNumber: 143,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$app$2f$footer$2e$tsx__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                 fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-                lineNumber: 195,
+                lineNumber: 196,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/app/actividades/negocio/modulo1/page.tsx",
-        lineNumber: 140,
+        lineNumber: 141,
         columnNumber: 5
     }, this);
 }

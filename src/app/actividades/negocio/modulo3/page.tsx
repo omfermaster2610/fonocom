@@ -149,9 +149,9 @@ export default function Modulo1() {
           <br />
           <h3 className="text-xl font-extrabold">Descripción</h3>
           <p className="text-sm font-light leading-relaxed">
-            La escucha activa es una habilidad fundamental en la comunicación efectiva. Implica prestar atención
-            completa al hablante, comprender su mensaje, y responder de manera apropiada. Esta actividad te ayudará a
-            desarrollar esta importante competencia.
+            En esta actividad se acompaña a los usuarios en el proceso de creación y estructuración de una idea de negocio, partiendo de sus intereses, habilidades y recursos disponibles. 
+            Se promueve el análisis del entorno, la identificación de necesidades del mercado y la definición de productos o servicios viables. 
+            El objetivo es que cada persona pueda visualizar un proyecto realista y sostenible, que responda a sus capacidades y al contexto en el que se desenvuelve.
           </p>
 
           {error && (

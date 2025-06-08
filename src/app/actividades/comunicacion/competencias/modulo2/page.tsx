@@ -149,7 +149,9 @@ export default function Modulo1() {
           <br />
           <h3 className="text-xl font-extrabold">Descripción</h3>
           <p className="text-sm font-light leading-relaxed">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Architecto molestiae unde numquam corrupti fugiat? Ad dolorem voluptatem non maiores! Dolore inventore obcaecati laborum recusandae quasi saepe unde numquam fuga excepturi.
+            Esta actividad trabaja los elementos no verbales del lenguaje oral, como el tono de voz, el ritmo, el volumen, la entonación y las pausas. 
+            Mediante actividades prácticas, se enseña a los usuarios a usar estos recursos de forma adecuada para expresar emociones, enfatizar mensajes y mejorar la comprensión del discurso. 
+            El objetivo es lograr una comunicación más expresiva, empática y efectiva en sus interacciones cotidianas.
           </p>
 
           {error && (

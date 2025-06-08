@@ -152,9 +152,9 @@ export default function Modulo1() {
           <br />
           <h3 className="text-xl font-extrabold">Descripción</h3>
           <p className="text-sm font-light leading-relaxed">
-            La escucha activa es una habilidad fundamental en la comunicación efectiva. Implica prestar atención
-            completa al hablante, comprender su mensaje, y responder de manera apropiada. Esta actividad te ayudará a
-            desarrollar esta importante competencia.
+            Esta actividad tiene como fin involucrar a las familias y cuidadores en el proceso de inclusión laboral, brindándoles orientación y estrategias para apoyar activamente a los usuarios. 
+            Se abordan temas como el acompañamiento en la búsqueda de empleo, la preparación emocional, el seguimiento del desempeño laboral y la promoción de la autonomía. 
+            Esta orientación busca fortalecer el vínculo entre el entorno familiar y el proceso de inserción, generando redes de apoyo que favorecen la sostenibilidad del empleo.
           </p>
 
           {error && (

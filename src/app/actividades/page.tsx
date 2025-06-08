@@ -176,7 +176,7 @@ export default function HomePage() {
                       <h3 className="text-lg font-semibold">{program.icon}{act.titulo}</h3>
                       <p className="text-sm text-gray-600">{act.descripcion}</p>
                       <a href={act.link} className="text-blue-600 hover:underline text-sm">
-                        Ver actividad
+                        <p className="underline hover:scale-105 transition">Ver actividad</p>
                       </a>
                     </div>
                   ))}

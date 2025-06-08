@@ -1,5 +1,113 @@
 {
   "app": {
+    "[project]/src/app/actividades/comunicacion/competencias/modulo1/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/comunicacion/competencias/modulo2/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/comunicacion/competencias/modulo3/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/comunicacion/competencias/modulo4/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/comunicacion/habilidades/modulo1/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/comunicacion/habilidades/modulo2/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/comunicacion/habilidades/modulo3/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/comunicacion/habilidades/modulo4/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/empleo/modulo1/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/empleo/modulo2/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/empleo/modulo3/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/empleo/modulo4/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/negocio/modulo1/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/negocio/modulo2/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/negocio/modulo3/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/negocio/modulo4/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/negocio/modulo5/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
+    "[project]/src/app/actividades/page": [
+      "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
+      "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
+      "static/media/or3nQ6H_1_WfwkMZI_qYFrcdmhHkjko-s.p.be19f591.woff2",
+      "static/media/FwZY7_Qmy14u9lezJ_6H6MmBp0u_-s.p.5dd3ec69.woff2"
+    ],
     "[project]/src/app/homepage/page": [
       "static/media/nuFvD_vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKeiunDXbtPK_F2qC0s-s.p.65b41d14.woff2",
       "static/media/gyByhwUxId8gMEwcGFWNOITd-s.p.da1ebef7.woff2",
